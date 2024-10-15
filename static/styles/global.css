@@ -1,0 +1,36 @@
+@font-face {
+    font-family: "Segoe Print";
+    src: url("/fonts/segoepr.ttf") format("truetype");
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "Segoe Print";
+    src: url("/fonts/segoeprb.ttf") format("truetype");
+    font-weight: bold;
+  }
+  
+
+:root {
+    --body-color: #18191a;
+    --primary-color: #00ff85;
+    --secondary-color: #ce66ff;
+    --tertiary-color: #ff9f00;
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-family: "Segoe Print", sans-serif;
+  }
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    background-color: var(--body-color);
+}
