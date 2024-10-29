@@ -1,9 +1,15 @@
 <script>
-	// import { Header } from '$lib';
+	import { Header, Doubleclick } from '$lib';
 	//   import Footer from '../lib/Footer.svelte';
 </script>
 
 <!-- <Header /> -->
+
+<Doubleclick />
+
+<header>
+	<Header />
+</header>
 
 <main class="wrapper">
 	<slot />
@@ -12,12 +18,16 @@
 <!-- <Footer /> -->
 
 <style>
+
+	header{
+		height: 5%;
+		margin: 0 10em 2em 10em;
+		border-bottom: solid var(--primary-color);
+	}
+
 	main {
-		display: grid;
-		grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
-		grid-template-rows: 1.5fr 1fr 1fr 1.5fr;
-		gap: 20px 20px;
-        height: 100%;
+		display: block;
+		margin: 0 10em;
 	}
 
 

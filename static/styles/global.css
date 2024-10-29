@@ -13,7 +13,8 @@
 
 :root {
     --body-color: #18191a;
-    --primary-color: #00ff85;
+    /* --primary-color: #00ff85; */
+    --primary-color: #91FF7B;
     --secondary-color: #ce66ff;
     --tertiary-color: #ff9f00;
   }
@@ -32,5 +33,37 @@ html{
 
 body{
     height: 100%;
-    background-color: var(--body-color);
+    background: linear-gradient(
+      to right,
+      var(--primary-color) 0%,
+      #1a1a1a 1%,
+      #1a1a1a 50%,
+      #1a1a1a 99%,
+      var(--primary-color) 100%
+  );
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+  color: var(--primary-color);
+}
+
+h1{
+  font-size: 3em;
+}
+
+h2{
+  font-size: 2.25em;
+}
+
+h3{
+  font-size: 1.875em;
+}
+
+p, a, li{
+  line-height: 1.5;
+  font-size: 1em;
+  list-style-type: none;
+  text-decoration: none;
+  color: var(--primary-color);
 }
