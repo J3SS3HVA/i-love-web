@@ -1,17 +1,15 @@
 <script>
     import { onMount } from "svelte";
-    import MarkdownIt from "markdown-it";  // Importeren van markdown-it
+    import MarkdownIt from "markdown-it";  
 
-    let contents = "";  // Variabele om de inhoud van de Markdown op te slaan
+    export let data;
 
-    // Haal de Markdown op zodra de component wordt gemonteerd
-    onMount(async () => {
-        const res = await fetch('/notes/Learning-Journal/Sprint-19.md');  // Pad naar je Markdown-bestand
-        const text = await res.text();  // Haal de tekst uit het bestand
+    let contents = "";  
 
-        const md = new MarkdownIt();  // Maak een nieuwe MarkdownIt instantie aan
-        contents = md.render(text);  // Zet de Markdown om naar HTML
-    });
+
+    const md = new MarkdownIt();  
+    contents = md.render(data);  
+    console.log(data);
 </script>
 
 
