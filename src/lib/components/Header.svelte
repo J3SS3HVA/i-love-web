@@ -6,7 +6,9 @@
 <div class="wrapper-nav">
     <nav>
       <ul>
-        <li><a href="#" class="active">Home</a></li>
+        <li><a href="/" class="active">Home</a></li>
+        <li><a href="#" class="active">We Love Web notes</a></li>
+        <li><a href="/Learning-Journal" class="active">Learning Journal</a></li>
       </ul>
     </nav>
     <nav>

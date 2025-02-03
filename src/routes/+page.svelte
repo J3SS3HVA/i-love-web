@@ -43,7 +43,7 @@
     }
 
     .about-me-container{
-        margin: 0 300px;
+        margin: var(--overall-content-margin);
     }
 
     .about-me h2{

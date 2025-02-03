@@ -29,6 +29,8 @@
     --primary-color: #91FF7B;
     --secondary-color: #ce66ff;
     --tertiary-color: #ff9f00;
+    
+    --overall-content-margin: 0 300px;
   }
 
 * {
