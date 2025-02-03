@@ -11,6 +11,18 @@
   }
   
 
+  @font-face {
+    font-family: "Jesse";
+    src: url("/fonts/PixelFont-Regular.otf") format("opentype");
+    
+  }
+
+  @font-face {
+    font-family: "Jesse2";
+    src: url("/fonts/Jes-Regular.otf") format("opentype");
+    
+  }
+
 :root {
     --body-color: #18191a;
     /* --primary-color: #00ff85; */
@@ -24,7 +36,7 @@
     margin: 0;
     box-sizing: border-box;
     line-height: 1.5;
-    font-family: "Segoe Print", sans-serif;
+    font-family: "Segoe Print", "Jesse", "Jesse2",sans-serif;
   }
 
 html{
@@ -32,6 +44,7 @@ html{
 }
 
 body{
+    /* text-transform: uppercase; */
     height: 100%;
     background: linear-gradient(
       to right,
@@ -49,21 +62,36 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1{
-  font-size: 3em;
+  font-size: 3rem;
 }
 
 h2{
-  font-size: 2.25em;
+  font-size: 2.25rem;
 }
 
 h3{
-  font-size: 1.875em;
+  font-size: 1.875rem;
 }
 
 p, a, li{
   line-height: 1.5;
-  font-size: 1em;
+  font-size: 1rem;
   list-style-type: none;
   text-decoration: none;
   color: var(--primary-color);
 }
+
+/* WebKit Scrollbar (voor Chrome, Edge en Safari) */
+::-webkit-scrollbar {
+  width: 0px; /* Breedte van de scrollbar */
+}
+
+
+
+/* Scrollbar Thumb (het bewegende deel) */
+::-webkit-scrollbar-thumb {
+  background: #1a1a1a;
+  width: 2px; /* Maakt de scrollbar afgerond */
+}
+
+

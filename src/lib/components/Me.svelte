@@ -21,21 +21,20 @@
 <style>
 	section {
 		display: flex;
-		border: 5px solid var(--primary-color);
-		border-radius: 20px;
+		border-left: 5px solid var(--primary-color);
+		border-right: 5px solid var(--primary-color);
 		margin: auto;
-		width: 100%;
 		height: 100%;
-		padding: 1.5em;
+		padding: 20px;
 		height: 600px;
-		margin-bottom: 6em;
+		margin: 60px 10em;
 	}
 	div {
 		width: 50%;
 	}
 
 	div h1 {
-		margin-bottom: 0.6em;
+		margin-bottom: 10px;
 	}
 
 	div:nth-child(2) {

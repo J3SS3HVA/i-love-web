@@ -6,7 +6,7 @@
 <div class="wrapper-nav">
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="#" class="active">Home</a></li>
       </ul>
     </nav>
     <nav>
@@ -14,12 +14,16 @@
   </div>
 
   <style>
-    .wrapper-nav {
+  .wrapper-nav {
     height: 100%;
     display: flex;
     justify-content: space-between;
     background-color: var(--primary-orange);
     padding: 0 1em;
+  }
+
+  :global(.wrapper-nav a.active){
+    color: var(--secondary-color);
   }
   
   /* ====== 1ste nav ====== */

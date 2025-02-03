@@ -1,11 +1,12 @@
 <script>
 	import { Header, Doubleclick } from '$lib';
 	//   import Footer from '../lib/Footer.svelte';
+
 </script>
 
 <!-- <Header /> -->
 
-<Doubleclick />
+<!-- <Doubleclick /> -->
 
 <header>
 	<Header />
@@ -21,13 +22,12 @@
 
 	header{
 		height: 5%;
-		margin: 0 10em 2em 10em;
+		margin: 0 10em;
 		border-bottom: solid var(--primary-color);
 	}
 
 	main {
 		display: block;
-		margin: 0 10em;
 	}
 
 
