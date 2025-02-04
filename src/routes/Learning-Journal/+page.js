@@ -20,7 +20,7 @@ export async function load({ params, url }) {
 
     return {
         data
-    };
+    }
 }
 
 // import { readFileSync } from 'fs';

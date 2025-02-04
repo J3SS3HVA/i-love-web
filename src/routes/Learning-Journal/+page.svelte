@@ -3,13 +3,12 @@
     import MarkdownIt from "markdown-it";  
 
     export let data;
-
+    
     let contents = "";  
 
 
     const md = new MarkdownIt();  
-    contents = md.render(data);  
-    console.log(data);
+    contents = md.render(data.data);  
 </script>
 
 
