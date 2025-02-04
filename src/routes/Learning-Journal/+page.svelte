@@ -16,19 +16,63 @@
     <h1>Learning Journal</h1>
 
     <section>
-        <!-- Hier wordt de Markdown-inhoud getoond -->
         <div class="markdown-content">
-            {@html contents}  <!-- De omgezette HTML wordt hier weergegeven -->
+            {@html contents}  
         </div>
     </section>
 </section>
 
 <style>
-    .learning-wrapper {
-        margin: 60px 10em;
+
+    /* alle text stylen voor de md file */
+
+    :global(.markdown-content) {
+        width: 100%;
     }
 
-    .learning-wrapper section {
-        margin: var(--overall-content-margin);
+
+    :global(.markdown-content h2),
+    :global(.markdown-content h3),
+    :global(.markdown-content h4),
+    :global(.markdown-content h5),
+    :global(.markdown-content h6),
+    :global(.markdown-content b),
+    :global(.markdown-content strong),
+    :global(.markdown-content i),
+    :global(.markdown-content em),
+    :global(.markdown-content p) {
+        margin: 10px 0;
+    }
+
+    :global(.markdown-content h1),
+    :global(.markdown-content h2),
+    :global(.markdown-content h3),
+    :global(.markdown-content h4),
+    :global(.markdown-content h5),
+    :global(.markdown-content h6) {
+        color: var(--primary-color);
+    }
+
+    :global(.markdown-content b),
+    :global(.markdown-content strong),
+    :global(.markdown-content i),
+    :global(.markdown-content em) {
+        color: var(--secondary-color);
+        font-family: "Segoe Print", "sans-serif";
+    }
+
+    :global(.markdown-content p) {
+    color: var(--tertiary-color);
+    }
+
+    .learning-wrapper {
+        margin: 60px 30em;
+        border-left: 5px solid var(--primary-color);
+		border-right: 5px solid var(--primary-color);
+        padding: 0 20px;
+    }
+
+    .learning-wrapper h1{
+        margin-bottom: 60px;
     }
 </style>
