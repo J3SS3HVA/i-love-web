@@ -4,35 +4,34 @@
 
     export let data;
     
-    let contents = "";  
+    let contents = [];
 
     const md = new MarkdownIt();
 
-     // Markdown-bestanden omzetten naar HTML
-     contents = data.markdownFiles.map(file => ({
+    // Markdown-bestanden omzetten naar HTML
+    contents = data.markdownFiles.map(file => ({
         filename: file.filename,
         content: md.render(file.content)
-    })); 
+    }));
 </script>
 
-
 <section class="notes-wrapper">
-    <h1>Learning Journal</h1>
+    <h1>We Love Web</h1>
 
     <section>
-        {#each contents as file}
-        <div class="markdown-content">
-            {@html file.content}
-        </div>
-{/each}
+    {#each contents as file}
+            <div class="markdown-content">
+                {@html file.content}
+            </div>
+    {/each}
     </section>
 </section>
 
 <style>
 
-    /* alle text stylen voor de md file */
+/* alle text stylen voor de md file */
 
-    :global(.markdown-content) {
+:global(.markdown-content) {
         width: 100%;
     }
 
@@ -81,4 +80,5 @@
     :global(.notes-wrapper h1){
         margin-bottom: 60px;
     }
+    
 </style>

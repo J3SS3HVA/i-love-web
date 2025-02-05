@@ -1,13 +1,13 @@
 <script>
     export let person;
-	import ProfileImg from './ProfileImg.svelte';
+	  import ProfileImg from './ProfileImg.svelte';
 </script>
 
 <div class="wrapper-nav">
     <nav>
       <ul>
         <li><a href="/" class="active">Home</a></li>
-        <li><a href="#" class="active">We Love Web notes</a></li>
+        <li><a href="/We-Love-Web" class="active">We Love Web notes</a></li>
         <li><a href="/Learning-Journal" class="active">Learning Journal</a></li>
       </ul>
     </nav>
@@ -22,6 +22,16 @@
     justify-content: space-between;
     background-color: var(--primary-orange);
     padding: 0 1em;
+  }
+
+  .wrapper-nav nav{
+    width: 50%;
+  }
+
+  .wrapper-nav nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
   }
 
   :global(.wrapper-nav a.active){
@@ -157,39 +167,10 @@
   .wrapper-nav nav:nth-child(2) a:hover i {
     transform: rotate(1turn);
   }
-  
-  .js .wrapper-nav nav ul {
-    display: flex;
-    /* width: 100%; */
-    position: absolute;
-    background: var(--primary-black);
-    flex-direction: column;
-    top: 30%;
-    height: 20em;
-    width: 30%;
-    justify-content: space-evenly;
-    align-items: center;
-    transform: translateX(-125%);
-    border-radius: 0 20px 20px 0;
-    transition: 0.3s;
-    z-index: 10000;
-  }
-  
+    
   .wrapper-nav nav ul.moved {
     transform: translateX(-25%);
   }
   
-  .wrapper-nav nav ul {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* grid-template-rows: 1fr 1fr; */
-    background: unset;
-    flex-direction: row;
-    height: unset;
-    position: unset;
-    width: 100%;
-    justify-content: space-evenly;
-    transform: translateX(0px);
-    justify-items: start;
-  }
+  
   </style>
