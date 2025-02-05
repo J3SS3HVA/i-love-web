@@ -31,11 +31,21 @@
         document.documentElement.style.setProperty("--tertiary-color", savedTertiary);
     }
 
-    // Wacht tot de DOM geladen is en stel de kleuren in
-    document.addEventListener("DOMContentLoaded", () => {
-        loadColors();
-        document.body.addEventListener("dblclick", changeColors);
+    let lastKey = null; // Variabele om bij te houden welke toets als laatste is ingedrukt
+
+    // Eventlistener voor toetsenbordinvoer
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "\\" && lastKey === "\\") {  
+            changeColors(); // Voer de functie uit als "\\" twee keer wordt ingedrukt
+            lastKey = null; // Reset de variabele
+        } else {
+            lastKey = event.key; // Sla de laatst ingedrukte toets op
+            setTimeout(() => { lastKey = null; }, 500); // Reset na 500ms zodat er een korte tijd is om de toets opnieuw in te drukken
+        }
     });
+
+    // Wacht tot de DOM geladen is en stel de kleuren in
+    document.addEventListener("DOMContentLoaded", loadColors);
 })();
 
 
