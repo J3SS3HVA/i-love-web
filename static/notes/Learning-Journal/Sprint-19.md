@@ -1,6 +1,6 @@
-## Week 1
+## Week 1 Fdnd agency
 
-### 3 februarie
+### 3 februari
 
 **introductie/algemeen**
 
@@ -25,8 +25,76 @@ Ben begonnen met het lezen van de contribution, handover en technische documenta
 
 **breakdown schets en code doornemen**
 
-Wat ik als eerst heb gedaan is de code doornemen. Kwam veel nieuwe dingen tegen zoals hoe de *slug* ongeveer werkt, *post* binnen svelte kit en de *actions* die erbij horen
+Wat ik als eerst heb gedaan is de code doornemen. Kwam veel nieuwe dingen tegen die ik wel eens eerder heb gebruikt in het vorige semester sind ik weinig heb gewerkt met data zoals hoe de *slug* ongeveer werkt, *post* binnen svelte kit en de *actions* die erbij horen.
 
-### 4 februarie
+**wat is een slug**
 
-### 5 februarie
+Dit is een heel belangrijk iets voor mij sinds ik nooit echt met slugs heb gewerkt.
+Een *slug* is het unieke identificerende deel van een webadres, meestal aan het einde van de URL.
+
+[mdn slug definition](https://developer.mozilla.org/en-US/docs/Glossary/Slug)
+
+Het word bij *Oncollaboration* meestal als detail pagina gebruikt zoals in [/webinars](https://oncollaboration.agency.fdnd.nl/webinars).
+
+
+### 4 februari
+
+**mobiele versie bouwen**
+
+Voordat ik de mobiele versie maakte was het mij opgevallen dat de webinars en contourings section er het zelfde uitzag als in de home. 
+Dat scheeld tijd dus heb de layout overgenomen en hem in mijn profiel page.svelte gezet.
+
+De enige s truggle was de Profile img met daarbij de profile info op zijn plek te krijgen, maar dat kosste niet veel moeite
+
+### 5 februari
+
+**mobiele versie afmaken en start maken aan de desktop**
+
+De layout was zowat klaar en ben van start gegaan aan het responsive maken van de page. 1 belangrijk ding wat mij opviel is dat De andere pages vooral bij de *@media* een min width van *500px*, *600px* en *1080px* gebruiken.
+
+**nieuwe color palette toepassen**
+
+Volgens het nieuwe ontwerp word er nu ook gebruik gemaakt van een nieuwe kleuren paletten. 
+Heb de hex waardes gepakt en ze overgezet naar hsl en heb dus uiteindelijk de oude kleuren vervangen met de nieuwe
+
+**before**
+
+  --primary-color: hsl(217, 44%, 23%);
+
+  --background-color: hsl(34, 41%, 93%);
+
+  --background-color-alt: hsl(0, 0%, 100%);
+  
+  --background-category-color: hsl(170, 23%, 79%);
+  
+  --hover-state-color: hsl(216, 37%, 38%);
+  
+  --accent-color-1: hsl(161, 48%, 24%);
+
+**after**
+
+  --primary-color: hsl(339, 100%, 21%);
+  
+  --background-color: hsl(338, 27%, 92%);
+  
+  --background-color-alt: hsl(0, 0%, 100%);
+  
+  --background-category-color: hsl(339, 26%, 76%);;
+  
+  --hover-state-color: hsl(339, 26%, 80%);
+  
+  --accent-color-1: hsl(340, 100%, 15%);
+
+### 6 februari
+
+**profile section anders stylen**
+
+Met wat hulp van de opdrachgever heb ik nu zowat bijna mijn hele profile page af qua styling en layout.
+
+**waar liep ik tegen aan**
+
+De profile section had veel te veel wit ruimte en had uberhaupt nog geen ontwerp van hoe deze section op desktop eruit moest zien. Daarom kwam *Sergio* (mijn opdracht gever) met het idee om de layout over te nemen van de speakers page.
+
+**wat nu?**
+
+De layout komt overeen met die van de speakres page, maar ik loop nog steeds met het probleem dat er veel wit ruimte is. Daarom heb ik als idee om onder de user info een *bio* section te zetten 
