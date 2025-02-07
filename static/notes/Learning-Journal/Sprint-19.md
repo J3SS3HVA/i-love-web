@@ -59,31 +59,31 @@ Heb de hex waardes gepakt en ze overgezet naar hsl en heb dus uiteindelijk de ou
 
 **before**
 
-  --primary-color: hsl(217, 44%, 23%);
+  ` --primary-color: hsl(217, 44%, 23%) `
 
-  --background-color: hsl(34, 41%, 93%);
+  ` --background-color: hsl(34, 41%, 93%) `
 
-  --background-color-alt: hsl(0, 0%, 100%);
+  ` --background-color-alt: hsl(0, 0%, 100%) `
   
-  --background-category-color: hsl(170, 23%, 79%);
+  ` --background-category-color: hsl(170, 23%, 79%) `
   
-  --hover-state-color: hsl(216, 37%, 38%);
+  ` --hover-state-color: hsl(216, 37%, 38%) `
   
-  --accent-color-1: hsl(161, 48%, 24%);
+  ` --accent-color-1: hsl(161, 48%, 24%) `
 
 **after**
 
-  --primary-color: hsl(339, 100%, 21%);
+  ` --primary-color: hsl(339, 100%, 21%); `
   
-  --background-color: hsl(338, 27%, 92%);
+  ` --background-color: hsl(338, 27%, 92%) `
   
-  --background-color-alt: hsl(0, 0%, 100%);
+  ` --background-color-alt: hsl(0, 0%, 100%) `
   
-  --background-category-color: hsl(339, 26%, 76%);;
+  ` --background-category-color: hsl(339, 26%, 76%); `
   
-  --hover-state-color: hsl(339, 26%, 80%);
+  ` --hover-state-color: hsl(339, 26%, 80%) `
   
-  --accent-color-1: hsl(340, 100%, 15%);
+  ` --accent-color-1: hsl(340, 100%, 15%); `
 
 ### 6 februari
 
