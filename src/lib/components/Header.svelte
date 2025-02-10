@@ -1,5 +1,5 @@
 <script>
-    export let person;
+    // export let person;
 	  import ProfileImg from './ProfileImg.svelte';
 </script>
 
@@ -56,16 +56,16 @@
     align-items: center;
   }
   
-  .wrapper-nav nav:nth-child(1) img {
+  /* .wrapper-nav nav:nth-child(1) img {
     height: 100%;
-  }
+  } */
   
   .wrapper-nav nav:nth-child(1) a:hover {
     border-bottom: 2px solid var(--primary-white);
     transition: 0.2s;
   }
   
-  .js .wrapper-nav nav:nth-child(1) .openbtn {
+  /* .js .wrapper-nav nav:nth-child(1) .openbtn {
     width: 50px;
     height: 50px;
     border-radius: 5px;
@@ -73,17 +73,17 @@
     position: relative;
     overflow: hidden;
     display: block;
-  }
+  } */
   
-  .wrapper-nav nav:nth-child(1) .openbtn {
+  /* .wrapper-nav nav:nth-child(1) .openbtn {
     display: none;
-  }
+  } */
   
-  .wrapper-nav nav:nth-child(1) .openbtn .openbtn-area {
+  /* .wrapper-nav nav:nth-child(1) .openbtn .openbtn-area {
     transition: all 0.4s;
-  }
+  } */
   
-  .wrapper-nav nav:nth-child(1) .openbtn span {
+  /* .wrapper-nav nav:nth-child(1) .openbtn span {
     position: absolute;
     background: var(--primary-white);
     display: inline-block;
@@ -107,13 +107,13 @@
         color: var(--primary-white);
       }
     }
-  }
+  } */
   
-  .wrapper-nav nav:nth-child(1) .openbtn.active .openbtn-area {
+  /* .wrapper-nav nav:nth-child(1) .openbtn.active .openbtn-area {
     transform: rotatex(360deg);
-  }
+  } */
   
-  .wrapper-nav nav:nth-child(1) .openbtn.active span {
+  /* .wrapper-nav nav:nth-child(1) .openbtn.active span {
     &:nth-of-type(1) {
       width: 45%;
       top: 18px;
@@ -132,7 +132,7 @@
         content: "";
       }
     }
-  }
+  } */
   
   /* ====== 2de nav ====== */
   
@@ -163,17 +163,17 @@
     align-items: flex-start;
   }
   
-  .wrapper-nav nav:nth-child(2) a i {
+  /* .wrapper-nav nav:nth-child(2) a i {
     transition: all 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 0s;
-  }
+  } */
   
-  .wrapper-nav nav:nth-child(2) a:hover i {
+  /* .wrapper-nav nav:nth-child(2) a:hover i {
     transform: rotate(1turn);
-  }
+  } */
     
-  .wrapper-nav nav ul.moved {
+  /* .wrapper-nav nav ul.moved {
     transform: translateX(-25%);
-  }
+  } */
   
   
   </style>

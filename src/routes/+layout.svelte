@@ -1,5 +1,5 @@
 <script>
-	import { Header, Doubleclick } from '$lib';
+	import { Header } from '$lib';
 	//   import Footer from '../lib/Footer.svelte';
 
 </script>
