@@ -4,6 +4,9 @@
         return "#" + Math.floor(Math.random() * 16777215).toString(16);
     }
 
+    // Zet de changeColors functie als een globale functie, zodat hij overal toegankelijk is
+    window.changeColors = changeColors; // Hiermee maak je changeColors beschikbaar in de globale scope
+
     // Functie die wordt aangeroepen bij dubbelklikken
     function changeColors() {
         const newPrimary = getRandomColor();
@@ -48,6 +51,17 @@
     document.addEventListener("DOMContentLoaded", loadColors);
 })();
 
+
+let lastTouchTime = 0; // Tijdstip van de laatste tik
+
+// Eventlistener voor mobiel (dubbel tikken)
+document.addEventListener("touchend", (event) => {
+    const currentTime = new Date().getTime();
+    if (currentTime - lastTouchTime <= 500) {  // Als de tik binnen 500 ms plaatsvond
+        changeColors(); // Voer de functie uit bij een dubbele tik
+    }
+    lastTouchTime = currentTime;
+});
 
 
 
