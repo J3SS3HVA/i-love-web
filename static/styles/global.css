@@ -159,6 +159,11 @@ p, a, li{
   color: #18191a;
 }
 
+.markdown-content li {
+  list-style: circle;
+  color: var(--tertiary-color);
+}
+
 .notes-wrapper {
   margin: 60px auto;
   border-left: 5px solid var(--primary-color);

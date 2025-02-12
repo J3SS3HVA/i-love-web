@@ -98,3 +98,60 @@ De profile section had veel te veel wit ruimte en had uberhaupt nog geen ontwerp
 **wat nu?**
 
 De layout komt overeen met die van de speakres page, maar ik loop nog steeds met het probleem dat er veel wit ruimte is. Daarom heb ik als idee om onder de user info een *bio* section te zetten 
+
+### 7 februari
+
+**code en design review**
+
+Eerst code en design review vandaag waarbij ik mijn styling en layout pagina presenteer aan mede studenten en een docent. Bij het presenteren van de profiel pagina werd er vooral natuurlijk gekeken naar code. 
+
+### 10 februari
+
+**erd schets voor data**
+
+Vandaag zijn er plannen gemaakt voor de data in richting van het toevoegen van favoriete webinars aan de favorite list
+
+Ben met hulp van een software developer student van start gegaan aan het maken van een *Erd Diagram* op de website van [lucidapp](https://lucid.app/lucidchart/28f5da21-95e5-4765-949f-9d2f924c943d/edit?page=0_0#) *Belangrijke bewijslast voor 3.1.2 voor standaarden*
+
+**empty state**
+
+Wilde ook alvast een empty state schetsen voor als er in een bepaalde section leeg is in de profiel page**
+
+**component & static en dynamic schets**
+
+De static en dynamic schets heeft beeld gegeven voor wat statisch geschreven moet worden en wat data is.
+
+Component schets voor eventueel welke content in een los bestand moet en wat niet
+
+**morphological chart voor de favorite button**
+
+Heb voor de favoriete button per categorie wat ideeën verzameld voordat ik het ga bouwen
+
+### 11 februari
+
+**code refactoren van pull request 7feb**
+
+De feedback was vooral gebaseerd op nette code dus daar had ik vandaag geen moeite mee
+
+**keuzes maken en feedback krijgen**
+
+Uiteindelijk heb ik beslissingen gemaakt met hoe ik de fav button eruit wil laten zien. In de morphological chart markeer ik alles met een rode border per categorie om aan te geven dat ik dat wil gebruiken bij de bouw fase.
+
+### 12 februarie
+
+**handover**
+
+Vandaag ben ik bezig met de overdracht, omdat er kans is dat ik binnenkort stage ga lopen. Hieronder is een lijstje met wat er gedaan moet worden voor de overdracht.
+
+**feedback**
+
+- feature branch conventies (titel gebaseerd op waar je aan werkt)
+- alleen engels
+- label cards by feature for webinars & webinars (label per feature or pages)
+- create main issue for each page & a general issue where you can place subissues for every page
+
+
+- branches opruimen ✓
+- check pull request from febuary the 7th ✓
+- Remove useless content (from comments etc. (directus)) ✓
+- desk research: when to use issues / subissues, when to use milestones and how to combine them. Turn this to a fdnd convention ✓

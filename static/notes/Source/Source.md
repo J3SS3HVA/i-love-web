@@ -54,5 +54,35 @@ Heb zelf bij de view transition coding spike wat kleuren te veranderen met het g
 
 [code](https://github.com/SamaraFellaDina/future-ready-design/blob/db3b1a399ffbe1744ab1df022d225f8cfc6a2b8a/static/styles/global.css#L8-L128)
 
+### milestones subissues
 
+**wat zijn milestones**
+
+Milestones zijn bedoeld om Progressie bij te houden van wat je wilt bereiken. In milestones kan je issues en pull requests erin toevoegen Die ermee temaken hebben.
+
+Voor meer info over milestones kun je heir naar toe gaan [gitdocs](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/about-milestones)
+
+**hoe werk je met milestones**
+
+- Ga naar issues of pull requests en klik op de knop milestones
+- In milestones Kan je een nieuwe milestone creeëren
+- Hierin kan je er een naam aangeven, description en een datum
+- Na het creeëren van een milestone kan je er nu issues en pull requests aan toevoegen.
+
+**Conventie**
+
+- Zorg voor goeie benamingen van de milestones 
+- Miles stones moet iets groot zijn sinds de issues die erin komen meestal onderdelen zijn van iets groots. (voobeeld van een milestone naam: refactor code base)
+- Milestones kunnen gelinked zijn aan userstories. Zorg ervoor dat de titel met een user story te maken heeft
+- Geef De miles stone Eeen versie nummer wanneer hij voledig af is. [semver](https://semver.org/).
+
+**wat zijn subissues**
+
+Subissues is een nieuwe feature van github waar je issues in een issue kan maken. 
+
+**Conventie**
+
+Bij het maken van Subissues zorg je ervoor dat ze klein blijven. Als de normale issue bijvoorbeeld *maken van een navbar*, dan is een subissue bijvoorbeeld "maken active state", "maken voor de active link" of "Icons toevoegen aan de nav".
+
+Gebruik het alleen voor issues die op een rij moeten komen, niet voor issues die eenmaal meer tijd kosten dan normaal.
  
