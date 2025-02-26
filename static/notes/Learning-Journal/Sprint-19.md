@@ -105,6 +105,8 @@ De layout komt overeen met die van de speakres page, maar ik loop nog steeds met
 
 Eerst code en design review vandaag waarbij ik mijn styling en layout pagina presenteer aan mede studenten en een docent. Bij het presenteren van de profiel pagina werd er vooral natuurlijk gekeken naar code. 
 
+## week 2
+
 ### 10 februari
 
 **erd schets voor data**
@@ -155,3 +157,27 @@ Vandaag ben ik bezig met de overdracht, omdat er kans is dat ik binnenkort stage
 - check pull request from febuary the 7th ✓
 - Remove useless content (from comments etc. (directus)) ✓
 - desk research: when to use issues / subissues, when to use milestones and how to combine them. Turn this to a fdnd convention ✓
+
+## week 3
+
+### 26 februarie
+
+Tijdje terug dat ik hier wat voor het latst heb geschreven, maar hier ben ik weer.
+
+**Fields in a fetch endpoint**
+
+Als eerst wil ik zeggen dat het mij gelukt is om een feature te maken dat elke user zijn eigen favoriete webinars lijst kan bekijken. Ik struggelde veel mee en kreeg daarbij ook natuurlijk een beetje hulp
+
+Je vind wat meer informatie over fields hier => :[Directus fields](https://docs.directus.io/reference/system/fields.html)
+
+**Code voorbeeld**
+
+in mijn eerste fetch die ik uitprobeerde wilde ik dus alles van de user ophalen. Wat het probleem was is dat De favourites *nested data* bevat die van een andere tabel komt.
+
+Om ervoor te zorgen dat ik de nested data pak is om dus fields te gebruiken hier is hoe mijn endpoints er nu uitzien
+
+```javascript
+    const userResponse = await fetchJson(
+      `${baseURL}avl_users/4?fields=id,fullname,email,profile_picture,entitle`
+    );
+```
