@@ -6,7 +6,9 @@
     
     let contents = "";  
 
-    const md = new MarkdownIt();
+    const md = new MarkdownIt({
+        html: true, 
+    });
 
      // Markdown-bestanden omzetten naar HTML
      contents = data.markdownFiles.map(file => ({

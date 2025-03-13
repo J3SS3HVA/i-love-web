@@ -1,4 +1,8 @@
-## Building your own browser, For fun andprofit Door Kylian Valkhof
+## Inhoudsopgave
+- [Kylian Valkhof](#14-feb)
+- [Cassie Evans](#7-mar)
+
+<h2 id="14-feb">Building your own browser, For fun andprofit Door Kylian Valkhof</h2>
 
 **polypane**
 

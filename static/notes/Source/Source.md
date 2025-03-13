@@ -1,7 +1,17 @@
 **sources die ik gebruik voor mijn werk + mijn code waar ik het verwerk**
 
+## Inhoudsopgave
+- [Semester 3 sources](#semester-3-sources)
+   - [Reactive statements](#reactive-statements)
+   - [Scss werkend krijgen](#scss-werkend-krijgen)
+   - [HSL kleuren](#hsl-kleuren)
+- [Semester 4 sources](#semester-4-sources)
+  - [Milestones & subissues](#milestones-subissues)
+  - [SEO (Search Engine Optimization)](#seo)
 
-### Reactive statements
+<h2 id="semester-3-sources">Semester 3 sources</h2>
+
+<h3 id="reactive-statements">Reactive statements</h3>
 
 Ik heb reactive statements gebruikt om ervoor te zorgen dat charts.
 
@@ -25,7 +35,7 @@ Bij het schrijven over reactive statements vond ik toevallig dit  [stack overflo
 
 
 
-### Scss werkend krijgen
+<h3 id="scss-werkend-krijgen">Scss werkend krijgen</h3>
 
 Voor de 3 week van sprint 17 wilde ik een achtergrond hebben met vallende sneeuw. Ik vond toen een [codepen](https://codepen.io/alphardex/pen/dyPorwJ) die dat had en werkte op vallende sneeuw
 
@@ -41,7 +51,7 @@ Hier is uitleg hoe heb ik het verwerkt heb in mijn project + uitleg over de scss
 
 
 
-### hsl kleuren
+<h3 id="hsl-kleuren">HSL kleuren</h3>
 
 Leuke workshop van Koop over kleuren en contrasten vertelde hij bijvoorbeeld over HSL. HSL is een andere manier om kleuren te kiezen voor je pagina. HSL staat voor Hue, saturation and lightness(vertaling: Tint of Kleurtoon, Verzadiging en helderheid)
 
@@ -54,7 +64,10 @@ Heb zelf bij de view transition coding spike wat kleuren te veranderen met het g
 
 [code](https://github.com/SamaraFellaDina/future-ready-design/blob/db3b1a399ffbe1744ab1df022d225f8cfc6a2b8a/static/styles/global.css#L8-L128)
 
-### milestones subissues
+
+<h2 id="semester-4-sources">Semester 4 sources</h2>
+
+<h3 id="milestones-subissues">Milestones & subissues</h3>
 
 **wat zijn milestones**
 
@@ -86,3 +99,9 @@ Bij het maken van Subissues zorg je ervoor dat ze klein blijven. Als de normale 
 
 Gebruik het alleen voor issues die op een rij moeten komen, niet voor issues die eenmaal meer tijd kosten dan normaal.
  
+
+<h3 id="seo">SEO (Search Engine Optimization)</h3>
+
+Nederlands voor * zoekmachine optimalisatie*. Een goeie SEO zorgt ervoor dat je hoog terecht komt bij zoek resultaten.
+
+Waarom ik hier over praat is omdat

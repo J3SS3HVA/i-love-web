@@ -1,6 +1,23 @@
-## Week 1 Fdnd agency
+## Inhoudsopgave
+- [Week 1](#week-1)
+   - [3 februari](#3-feb)
+   - [4 februari](#4-feb)
+   - [5 februari](#5-feb)
+   - [6 februari](#6-feb)
+   - [7 februari](#7-feb)
+- [Week 2](#week-2)
+   - [10 februari](#10-feb)
+   - [11 februari](#11-feb)
+   - [12 februari](#12-feb)
+- [Week 3](#week-3)
+   - [26 februari](#26-feb)
+- [Week 6](#week-6)
+   - [13 maart](#13-mrt)
 
-### 3 februari
+
+<h2 id="week-1">Week 1</h2>
+
+<h3 id="3-feb">3 februari</h3>
 
 **introductie/algemeen**
 
@@ -37,7 +54,7 @@ Een *slug* is het unieke identificerende deel van een webadres, meestal aan het 
 Het word bij *Oncollaboration* meestal als detail pagina gebruikt zoals in [/webinars](https://oncollaboration.agency.fdnd.nl/webinars).
 
 
-### 4 februari
+<h3 id="4-feb">4 februari</h3>
 
 **mobiele versie bouwen**
 
@@ -46,7 +63,7 @@ Dat scheeld tijd dus heb de layout overgenomen en hem in mijn profiel page.svelt
 
 De enige s truggle was de Profile img met daarbij de profile info op zijn plek te krijgen, maar dat kosste niet veel moeite
 
-### 5 februari
+<h3 id="5-feb">5 februari</h3>
 
 **mobiele versie afmaken en start maken aan de desktop**
 
@@ -85,7 +102,7 @@ Heb de hex waardes gepakt en ze overgezet naar hsl en heb dus uiteindelijk de ou
   
   ` --accent-color-1: hsl(340, 100%, 15%); `
 
-### 6 februari
+<h3 id="6-feb">6 februari</h3>
 
 **profile section anders stylen**
 
@@ -99,15 +116,15 @@ De profile section had veel te veel wit ruimte en had uberhaupt nog geen ontwerp
 
 De layout komt overeen met die van de speakres page, maar ik loop nog steeds met het probleem dat er veel wit ruimte is. Daarom heb ik als idee om onder de user info een *bio* section te zetten 
 
-### 7 februari
+<h3 id="7-feb">7 februari</h3>
 
 **code en design review**
 
 Eerst code en design review vandaag waarbij ik mijn styling en layout pagina presenteer aan mede studenten en een docent. Bij het presenteren van de profiel pagina werd er vooral natuurlijk gekeken naar code. 
 
-## week 2
+<h2 id="week-2">Week 2</h2>
 
-### 10 februari
+<h3 id="10-feb">10 februari</h3>
 
 **erd schets voor data**
 
@@ -129,7 +146,7 @@ Component schets voor eventueel welke content in een los bestand moet en wat nie
 
 Heb voor de favoriete button per categorie wat ideeën verzameld voordat ik het ga bouwen
 
-### 11 februari
+<h3 id="11-feb">11 februari</h3>
 
 **code refactoren van pull request 7feb**
 
@@ -139,7 +156,7 @@ De feedback was vooral gebaseerd op nette code dus daar had ik vandaag geen moei
 
 Uiteindelijk heb ik beslissingen gemaakt met hoe ik de fav button eruit wil laten zien. In de morphological chart markeer ik alles met een rode border per categorie om aan te geven dat ik dat wil gebruiken bij de bouw fase.
 
-### 12 februarie
+<h3 id="12-feb">12 februari</h3>
 
 **handover**
 
@@ -158,9 +175,9 @@ Vandaag ben ik bezig met de overdracht, omdat er kans is dat ik binnenkort stage
 - Remove useless content (from comments etc. (directus)) ✓
 - desk research: when to use issues / subissues, when to use milestones and how to combine them. Turn this to a fdnd convention ✓
 
-## week 3
+<h2 id="week-3">Week 3</h2>
 
-### 26 februarie
+<h3 id="26-feb">26 februari</h3>
 
 Tijdje terug dat ik hier wat voor het latst heb geschreven, maar hier ben ik weer.
 
@@ -181,3 +198,17 @@ Om ervoor te zorgen dat ik de nested data pak is om dus fields te gebruiken hier
       `${baseURL}avl_users/4?fields=id,fullname,email,profile_picture,entitle`
     );
 ```
+
+<h2 id="week-6">Week 6</h2>
+
+<h3 id="13-mrt">13 maart</h3>
+
+Heb een sprint review vandaag gehadhier is een kort lijstje met de feedback die ik heb gekregen
+
+- nav bar 2de logo ziekenhuis indonesie er naast zet voor nieuwe nav bar versie
+
+- hoofdstukken in video
+
+- duidelijkere uitleg over recources
+
+- telefoon weg halen
