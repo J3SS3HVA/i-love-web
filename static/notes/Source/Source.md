@@ -8,6 +8,8 @@
 - [Semester 4 sources](#semester-4-sources)
   - [Milestones & subissues](#milestones-subissues)
   - [SEO (Search Engine Optimization)](#seo)
+  - [SPA (Single page application)](#spa)
+  - [data-sveltekit-noscroll](#dsn)
 
 <h2 id="semester-3-sources">Semester 3 sources</h2>
 
@@ -98,10 +100,14 @@ Subissues is een nieuwe feature van github waar je issues in een issue kan maken
 Bij het maken van Subissues zorg je ervoor dat ze klein blijven. Als de normale issue bijvoorbeeld *maken van een navbar*, dan is een subissue bijvoorbeeld "maken active state", "maken voor de active link" of "Icons toevoegen aan de nav".
 
 Gebruik het alleen voor issues die op een rij moeten komen, niet voor issues die eenmaal meer tijd kosten dan normaal.
- 
+
 
 <h3 id="seo">SEO (Search Engine Optimization)</h3>
 
 Nederlands voor * zoekmachine optimalisatie*. Een goeie SEO zorgt ervoor dat je hoog terecht komt bij zoek resultaten.
 
 Waarom ik hier over praat is omdat
+
+<h3 id="spa">SPA (Single page aplication)</h3>
+
+<h3 id="dsn">data-sveltekit-noscroll</h3>

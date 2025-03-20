@@ -13,6 +13,8 @@
    - [26 februari](#26-feb)
 - [Week 6](#week-6)
    - [13 maart](#13-mrt)
+- [Week 7](#week-7)
+   - [17 maart](#17-mrt)
 
 
 <h2 id="week-1">Week 1</h2>
@@ -212,3 +214,31 @@ Heb een sprint review vandaag gehadhier is een kort lijstje met de feedback die 
 - duidelijkere uitleg over recources
 
 - telefoon weg halen
+
+**nieuwe opdracht voor mij en 1ste jaars**
+
+Joost was ook kort bij de sprint review en kwam tijdens het gesprek met het idee dat we 2 taken verdelen tussen mij en de 1e jaars
+
+- Naast de feedback die ik kreeg zal ik werken aan een chapter functie voor elke webinar
+- eerste jaars gaan naast hun project ook onderzoek doen naar de huisstijl van het ziekenhuis in indonesië en zullen uiteindelijk met een nieuwe kleuren pallette komen die zowel past bij zowel het nederlandse ziekenhuis als het indonesische ziekenhuis
+
+
+<h2 id="week-7">week 7</h2>
+
+<h3 id="17-mrt">17 maart</h3>
+
+Aan de hand van de sprint review heb ik het vandaag gehad over de feedback die de eerste jaars hebben gekregen besproken met Halima (1ste jaars die ook werkt aan oncollaboration).
+
+**wat viel mij op?**
+
+Tijdens de sprint review hadden we het gehad over de navigatie. De opdracht gever vond het een leuk idee om een hamburger menu te maken voor alle linkjes. Het probleem was dat als javascript uit staat de hamburger menu het niet meer doet waardoor je extra code moet schrijven om de nav menu toegankelijk te maken ook als staat js uit staat.
+
+**mijn versie**
+
+Mijn versie van de nav menu is altijd zichtbaar en staat onderaan op de pagina
+
+- het heeft position fixed dus je kan er altijd bij wanneer je scrolled
+- linkjes zijn duidelijk en makkelijk op te klikken
+- en heeft geen javascript nodig dus dat scheeld ook veel code
+
+zie mijn live site op mobiel [live site](https://oncollaboration.agency.fdnd.nl/)
