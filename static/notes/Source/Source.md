@@ -10,6 +10,10 @@
   - [SEO (Search Engine Optimization)](#seo)
   - [SPA (Single page application)](#spa)
   - [data-sveltekit-noscroll](#dsn)
+  - [Svelte 5 props](#props)
+  - [event Bubbling](#event-bubbling)
+  - [app/store](#store)
+  - [State Management](#state-management)
 
 <h2 id="semester-3-sources">Semester 3 sources</h2>
 
@@ -106,8 +110,48 @@ Gebruik het alleen voor issues die op een rij moeten komen, niet voor issues die
 
 Nederlands voor * zoekmachine optimalisatie*. Een goeie SEO zorgt ervoor dat je hoog terecht komt bij zoek resultaten.
 
-Waarom ik hier over praat is omdat
+Waarom ik hier over praat is omdat ik hier ook mee te maken had. Bij het uitvoeren van een [lighthousetest](https://github.com/fdnd-agency/oncollaboration/issues/57#issuecomment-2718208116) bij het project van [oncolaboration](https://oncollaboration.agency.fdnd.nl/) mij een opvallende score terug gaf. Ik was benieuwd wat en waarom Het zo'n lage score terug gaft.
+
+**De reden**
+
+Dit stukje in de *app.html*  zorgt ervoor dat de score zo laag was. ```<meta name="robots" content="noindex, nofollow">``` Bevat het content attribuut. De noindex & nofollow zorgen er dus voor dat websites bijvoorbeeld niet hoog komen bij search engines en niet worden geïndexeerd. Dit betekent dat de pagina niet verschijnt in zoekresultaten en dat zoekmachines geen links op de pagina volgen.
+
+**waarom werd het dus toegepast in het project?**
+
+volgens de site [maxlead](https://maxlead.com/seo-kennisbank/seo-wat-is-een-noindex-nofollow/#:~:text=Deze%20meta%20tag%20is%20een,pagina%20niet%20gevolgd%20mogen%20worden.) zijn dit de volgende redenen.
+
+- Een website, bijvoorbeeld een testomgeving, niet in zoekmachines terecht mag komen.
+- Een pagina informatie bevat waarvan de webmaster niet wil dat deze door zoekmachinespiders geïndexeerd wordt.
+
+Eigelijk als je het zo bekijkt is het best logisch want de Website zit nog in een *alpha* fase dus hij is nog niet helemaal af
 
 <h3 id="spa">SPA (Single page aplication)</h3>
 
+SvelteKit maakt dus gebruik van het SPA techniek. Dat betekent dat wanneer je van de ene pagina naar de andere gaat, de browser niet de hele pagina opnieuw laadt, maar alleen de benodigde content vervangt. Fijn voor users want dit zorgt soms voor een snellere en smoothere navigatie. 
+
+meer info over SPA vind je hier [svelteDOCS](https://svelte.dev/docs/kit/single-page-apps)
+
+- Dit kan ook nadelen hebben bijvoorbeeld wanneer de pagina veel *javascript* nodig heeft bij het renderen van de pagina
+- of als *SEO* heel belangrijk is voor de website
+
+Ik Heb hier trouwens zelf hier profeit van gemaakt: Check [hier](https://github.com/orgs/fdnd-agency/projects/35?pane=issue&itemId=102724537&issue=fdnd-agency%7Concollaboration%7C65) hoe ik een chapter video heb Zowel client als serverside werken heb gemaakt. Zonder de *eventPreventdefault()*
+zorgt de SPA techniek er nog steeds voor dat de pagina niet refreshed wanneer ik navigeer tussen chapters
+
+
 <h3 id="dsn">data-sveltekit-noscroll</h3>
+
+Om Het zo makkelijk mogelijk uit te leggen is dat wanneer je navigeert binnen de pagina zorgt deze attribuut van SvleteKit ervoor dat je niet terug gaat naar de orginele positie van waar je op de pagina begint.
+
+Deze techniek heb ik ook toegepast bij de chapter functie zodat je niet steeds naar de top van de pagina word gestuurd als je op 1 van de chapters klikt 
+
+[hier](https://github.com/fdnd-agency/oncollaboration/issues/65#issuecomment-2737215941) dezelfde issue als waar ik vertel over *SPA* techniek van SvelteKit vind je dus ook een kleine documentatie dat ik dus de *data-sveltekit-noscroll* attribuut heb toegepast in mijn code.
+
+hier is meer info over de *data-sveltekit-noscroll* techniek [svelteDOCS](https://svelte.dev/docs/kit/link-options#data-sveltekit-noscroll)
+
+<h3 id="props">Svelte 5 props</h3>
+
+<h3 id="event-bubbling">event Bubbling</h3>
+
+<h3 id="store">app/store</h3>
+
+<h3 id="state-management">State Management</h3>

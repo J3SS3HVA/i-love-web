@@ -215,6 +215,27 @@ Heb een sprint review vandaag gehadhier is een kort lijstje met de feedback die 
 
 - telefoon weg halen
 
+**wat heb ik allmaal gepresenteerd**
+
+Ik heb het volgende latenzien
+
+- verteld over de speaker page
+   - Nieuwe ideeën laten zien over de featured webinar section
+   - PE van de page
+- Profile page
+   - design laten zien.
+   - verteld over de favorite webinars.
+   - de emptystate laten zien.
+- overige dingen
+   - nieuwe color pallete toegepast
+   - omdraaien van de comments zodat de nieuwste altijd boven aan staat.
+
+**Wat vond de opdracht gever ervan?**
+
+Ze was heel tevreden. Zeker over het idee om van het het component die de Featured webinars laat zien op desktop. Later zal ik ook een Fallback ervoor maken dat als je uitstaat er iets anders voor komt dat je nogsteeds de webinars kan zien.
+
+Naast dat vond ze het heel fijn hoe ik bijvoorbeeld rekening hou voor mensen die bijvoorbeeld geen javascript aan hebben en natuurlijk aandacht hou op andere kleine details.
+
 **nieuwe opdracht voor mij en 1ste jaars**
 
 Joost was ook kort bij de sprint review en kwam tijdens het gesprek met het idee dat we 2 taken verdelen tussen mij en de 1e jaars
