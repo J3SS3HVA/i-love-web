@@ -159,7 +159,8 @@ p, a, li{
   color: #18191a;
 }
 
-.markdown-content ul{
+.markdown-content ul,
+.markdown-content ol {
   padding: revert;
 }
 

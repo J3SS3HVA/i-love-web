@@ -12,7 +12,6 @@
   - [data-sveltekit-noscroll](#dsn)
   - [Svelte 5 props](#props)
   - [event Bubbling](#event-bubbling)
-  - [app/store](#store)
   - [State Management](#state-management)
 
 <h2 id="semester-3-sources">Semester 3 sources</h2>
@@ -150,8 +149,61 @@ hier is meer info over de *data-sveltekit-noscroll* techniek [svelteDOCS](https:
 
 <h3 id="props">Svelte 5 props</h3>
 
+In svelte 5 is *props* een *rune*. Runes zijn symbolen die je gebruikt Svelte bestanden om de Svelte-compiler aan te sturen. Als je Svelte als een eigen taal beschouwt, dan zijn runes een onderdeel van de syntaxis — ze functioneren als sleutelwoorden.
+
+Het is belangrijk om te weten dat er verschillen zijn tussen *runes* en Vanilla js functies
+
+- je hoeft ze niet te importeren sinds het ingebouwd is door svelte
+- het zijn geen waardes, dus je kunt ze niet aan een agrument toewijzen van een functio of ze aan een variable geven
+- Net als js sleutel worden zijn *runes* alleen geldig binnen bepaalde gedeeltes binnen je code
+
+**Maar wat doen props?**
+
+*props* zorgt ervoor dat je bepaalde eigenschappen ophaald 
+
+hier is een voorbeeld wat een ander student heeft gemaakt:
+
+```
+let { placeholder = "Type hier...", id, type = "text", ...rest } = $props();
+```
+
+Hier worden dus placeholder, id, type en nogmeer dingen ALS die erbij komen doorgestuurd naar andere components
+
+en hier is hoe hij het in een andere file ophaalt en daarbij ook een nieuwe eigenschap erbij toevoegd
+
+```
+let { onchange } = $props();
+```
+
+**andere voordelen van props**
+
+- het vervangt *export let*, dus je hoeft de eigenschappen niet meer handmatig op te halen
+- je kan akke eigenschappen destructurenen als dat nodig is.
+- en voorkomt dubbele declaraties in components
+
+[hier](https://svelte.dev/docs/svelte/what-are-runes) vind je meer over *runes*
+[hier](https://svelte.dev/docs/svelte/$props) vind je meer over *props*
 <h3 id="event-bubbling">event Bubbling</h3>
 
-<h3 id="store">app/store</h3>
+Event bubbling in Svelte 5 betekent dat events van een child-component automatisch omhoog gaan naar de parent-component, zodat de parent erop kan reageren
 
-<h3 id="state-management">State Management</h3>
+Robin van der Heijden die werkt aan het [atlas](https://github.com/fdnd-agency/atlas4045) project gebruikt deze methode bij het maken van zijn filter functie op de [posters](https://atlas4045.agency.fdnd.nl/posters/) pagina
+
+**Hoe werkt het**
+
+1. als eerst maakt hij in zijn *atom* component een object waar meerdere variablen gedefinieerd word naar de *$props();* onderandere de *onchange*. Het is wel belangrijk om te onthouden dat hier nog niks gedaan word met de *onchange* sinds hij dit nog niet van zijn parent component heeft ontvangen.
+2. In het *molecule* component wordt *onchange* als prop opgehaald en doorgegeven aan het atom component. Hierdoor kan het atoom component zijn eigen *onchange* omhoog sturen
+3. Binnen het *Orgnisme* component word het daardwerkelijke event-handler(filterhandler) gedefinieert voor de *naam* en *straat*. Deze word uiteindelijk als *onchange* aan de molecule component doorgegeven die dat dan weer naar het atoom component stuurt, waardoor als de gebruiker iets intypt in de TextInput hij het event helemaal doorbubbelt van het atoom naar het organism.
+
+Zie [hier](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Event_bubbling#introducing_event_bubbling) de basis over event bubbling
+
+En [hier](https://svelte.dev/docs/svelte/v5-migration-guide#Event-changes-Component-events) meer info over event bubbling in svelte 5.
+
+
+<h3 id="state-management">Sveltekit State Management</h3>
+
+State management word gebruikt op de lokale staat van een user te beheren. Daarmee bedoel ik binnen de code bepaal wat er gebeurt als de user iets aan de data veranderd of wanneer hij binnen een page navigeert.
+
+eigelijk zijn de [Reactive statements](#reactive-statements) ook een voorbeeld van de statement management. het zorgt ervoor dat de data geupdate word binnen de pagina en dat ook kan displayen. 
+
+een ander voorbeeld wat ook mij had geholpen met de chapter function van *oncollaboration* is de *$app/stores*. dit stuk code heeft  ervoor gezorgd dat als ik een chapter van de video aanklik hij de pagina niet refreshed. Dus het is niet alleen de *spa* methode die dat afhandelt.
