@@ -77,33 +77,33 @@ Volgens het nieuwe ontwerp word er nu ook gebruik gemaakt van een nieuwe kleuren
 Heb de hex waardes gepakt en ze overgezet naar hsl en heb dus uiteindelijk de oude kleuren vervangen met de nieuwe
 
 **before**
+```css
+   --primary-color: hsl(217, 44%, 23%) 
 
-  ` --primary-color: hsl(217, 44%, 23%) `
+   --background-color: hsl(34, 41%, 93%) 
 
-  ` --background-color: hsl(34, 41%, 93%) `
-
-  ` --background-color-alt: hsl(0, 0%, 100%) `
+   --background-color-alt: hsl(0, 0%, 100%) 
   
-  ` --background-category-color: hsl(170, 23%, 79%) `
+   --background-category-color: hsl(170, 23%, 79%) 
   
-  ` --hover-state-color: hsl(216, 37%, 38%) `
+   --hover-state-color: hsl(216, 37%, 38%) 
   
-  ` --accent-color-1: hsl(161, 48%, 24%) `
-
+   --accent-color-1: hsl(161, 48%, 24%) 
+```
 **after**
-
-  ` --primary-color: hsl(339, 100%, 21%); `
+```css
+   --primary-color: hsl(339, 100%, 21%); 
   
-  ` --background-color: hsl(338, 27%, 92%) `
+   --background-color: hsl(338, 27%, 92%) 
   
-  ` --background-color-alt: hsl(0, 0%, 100%) `
+   --background-color-alt: hsl(0, 0%, 100%) 
   
-  ` --background-category-color: hsl(339, 26%, 76%); `
+   --background-category-color: hsl(339, 26%, 76%); 
   
-  ` --hover-state-color: hsl(339, 26%, 80%) `
+   --hover-state-color: hsl(339, 26%, 80%) 
   
-  ` --accent-color-1: hsl(340, 100%, 15%); `
-
+   --accent-color-1: hsl(340, 100%, 15%); 
+```
 <h3 id="6-feb">6 februari</h3>
 
 **profile section anders stylen**
@@ -195,7 +195,7 @@ in mijn eerste fetch die ik uitprobeerde wilde ik dus alles van de user ophalen.
 
 Om ervoor te zorgen dat ik de nested data pak is om dus fields te gebruiken hier is hoe mijn endpoints er nu uitzien
 
-```javascript
+```js
     const userResponse = await fetchJson(
       `${baseURL}avl_users/4?fields=id,fullname,email,profile_picture,entitle`
     );

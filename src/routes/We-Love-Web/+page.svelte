@@ -1,20 +1,9 @@
 <script>
-    import { onMount } from "svelte";
-    import MarkdownIt from "markdown-it";  
-
-    export let data;
+    import { useMarkdownRenderer } from "$lib/markdownRender.js";
     
-    let contents = [];
-
-    const md = new MarkdownIt({
-        html: true, 
-    });
-
-    // Markdown-bestanden omzetten naar HTML
-    contents = data.markdownFiles.map(file => ({
-        filename: file.filename,
-        content: md.render(file.content)
-    }));
+    export let data;
+  
+    let contents = useMarkdownRenderer(data);
 </script>
 
 <section class="notes-wrapper">

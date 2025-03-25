@@ -113,7 +113,13 @@ Waarom ik hier over praat is omdat ik hier ook mee te maken had. Bij het uitvoer
 
 **De reden**
 
-Dit stukje in de *app.html*  zorgt ervoor dat de score zo laag was. ```<meta name="robots" content="noindex, nofollow">``` Bevat het content attribuut. De noindex & nofollow zorgen er dus voor dat websites bijvoorbeeld niet hoog komen bij search engines en niet worden geïndexeerd. Dit betekent dat de pagina niet verschijnt in zoekresultaten en dat zoekmachines geen links op de pagina volgen.
+Dit stukje in de *app.html*  zorgt ervoor dat de score zo laag was. 
+```html
+<meta name="robots" content="noindex, nofollow">
+```
+
+<!--<code class="hljs" data-language="js">-->
+Bevat het content attribuut. De noindex & nofollow zorgen er dus voor dat websites bijvoorbeeld niet hoog komen bij search engines en niet worden geïndexeerd. Dit betekent dat de pagina niet verschijnt in zoekresultaten en dat zoekmachines geen links op de pagina volgen.
 
 **waarom werd het dus toegepast in het project?**
 
@@ -163,7 +169,7 @@ Het is belangrijk om te weten dat er verschillen zijn tussen *runes* en Vanilla 
 
 hier is een voorbeeld wat een ander student heeft gemaakt:
 
-```
+```js
 let { placeholder = "Type hier...", id, type = "text", ...rest } = $props();
 ```
 
@@ -171,7 +177,7 @@ Hier worden dus placeholder, id, type en nogmeer dingen ALS die erbij komen door
 
 en hier is hoe hij het in een andere file ophaalt en daarbij ook een nieuwe eigenschap erbij toevoegd
 
-```
+```js
 let { onchange } = $props();
 ```
 

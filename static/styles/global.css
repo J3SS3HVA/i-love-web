@@ -154,10 +154,10 @@ p, a, li{
   color: var(--tertiary-color);
 }
 
-.markdown-content code {
+/* .markdown-content code {
   background-color: var(--primary-color);
   color: #18191a;
-}
+} */
 
 .markdown-content ul,
 .markdown-content ol {
