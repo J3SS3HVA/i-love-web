@@ -149,7 +149,7 @@ Om Het zo makkelijk mogelijk uit te leggen is dat wanneer je navigeert binnen de
 
 Deze techniek heb ik ook toegepast bij de chapter functie zodat je niet steeds naar de top van de pagina word gestuurd als je op 1 van de chapters klikt 
 
-[hier](https://github.com/fdnd-agency/oncollaboration/issues/65#issuecomment-2737215941) dezelfde issue als waar ik vertel over *SPA* techniek van SvelteKit vind je dus ook een kleine documentatie dat ik dus de *data-sveltekit-noscroll* attribuut heb toegepast in mijn code.
+[hier](https://github.com/fdnd-agency/oncollaboration/issues/65#issuecomment-2737215941) dezelfde issue als waar ik vertel over de *SPA* techniek van SvelteKit. Hier vind je dus ook een kleine documentatie dat ik dus de *data-sveltekit-noscroll* attribuut heb toegepast in mijn code.
 
 hier is meer info over de *data-sveltekit-noscroll* techniek [svelteDOCS](https://svelte.dev/docs/kit/link-options#data-sveltekit-noscroll)
 
@@ -184,7 +184,7 @@ let { onchange } = $props();
 **andere voordelen van props**
 
 - het vervangt *export let*, dus je hoeft de eigenschappen niet meer handmatig op te halen
-- je kan akke eigenschappen destructurenen als dat nodig is.
+- je kan alle eigenschappen destructurenen als dat nodig is.
 - en voorkomt dubbele declaraties in components
 
 [hier](https://svelte.dev/docs/svelte/what-are-runes) vind je meer over *runes*
