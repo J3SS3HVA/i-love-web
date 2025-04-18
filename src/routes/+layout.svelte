@@ -1,14 +1,17 @@
 <script>
 	import { Header } from '$lib';
-	//   import Footer from '../lib/Footer.svelte';
+	import { page } from '$app/stores'; // Import the page store to access the current route
+    import { Squareorbit } from '$lib'; // Import the square-orbit component
 
 </script>
 
-<!-- <Header /> -->
+<Squareorbit />
 
+{#if !$page.url.pathname.includes('/square-orbit')}
 <header>
-	<Header />
+    <Header />
 </header>
+{/if}
 
 <main class="wrapper">
 	<slot />
