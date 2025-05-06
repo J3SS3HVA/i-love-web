@@ -185,3 +185,24 @@ p, a, li{
 .markdown-content h3 {
   margin-top: 60px;
 }
+
+/* Default selection styling */
+::selection {
+  background-color: var(--primary-color);
+  color: var(--body-color);
+}
+
+/* Selection styling for elements with secondary color */
+.markdown-content b::selection,
+.markdown-content strong::selection,
+a::selection {
+  background-color: var(--secondary-color);
+  color: var(--body-color);
+}
+
+/* Selection styling for elements with tertiary color */
+.markdown-content p::selection,
+.markdown-content li::selection {
+  background-color: var(--tertiary-color);
+  color: var(--body-color);
+}

@@ -5,7 +5,7 @@
 
 </script>
 
-<Squareorbit />
+<!-- <Squareorbit /> -->
 
 {#if !$page.url.pathname.includes('/square-orbit')}
 <header>

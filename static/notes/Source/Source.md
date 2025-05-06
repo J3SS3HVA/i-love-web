@@ -13,6 +13,8 @@
   - [Svelte 5 props](#props)
   - [event Bubbling](#event-bubbling)
   - [State Management](#state-management)
+- [Semester 4.5 sources](#semester-4.5-sources)
+  - [svelte 5 runes](#svelte-runes)
 
 <h2 id="semester-3-sources">Semester 3 sources</h2>
 
@@ -213,3 +215,50 @@ State management word gebruikt op de lokale staat van een user te beheren. Daarm
 eigelijk zijn de [Reactive statements](#reactive-statements) ook een voorbeeld van de statement management. het zorgt ervoor dat de data geupdate word binnen de pagina en dat ook kan displayen. 
 
 een ander voorbeeld wat ook mij had geholpen met de chapter function van *oncollaboration* is de *$app/stores*. dit stuk code heeft  ervoor gezorgd dat als ik een chapter van de video aanklik hij de pagina niet refreshed. Dus het is niet alleen de *spa* methode die dat afhandelt.
+
+<h2 id="semester-4.5-sources">Semester 4.5 sources</h2>
+
+<h3 id="svelte-runes">Svelte 5 Runes</h3>
+
+Bij het onderwerp over [event-bubbling](#event-bubbling) heb ik wat verteld over het gebruik van *$props;*. *$props;* is een rune wat een nieuwe feature is van svelte 5, maar wat is een rune precies, wat doen ze en hoeveel zijn er.
+
+Runes zijn Syntaxes (keywords) die de compiler van svelte controllen. Je kan ze herkennen met de $ teken die ze hebben
+
+**alle runes op een rij**
+
+- *$props;*
+- *$state*
+- *$derived*
+- *$effect*
+- *$bindable*
+- *$inspect*
+- *$host*
+
+**runes mode**
+
+Om runes leesbaar te maken heb ik hulp gekregen van christopher die een script had die ervoor zorgt dat runes herkend word binnen vs code
+
+[issue over de sv5 migration](https://github.com/fdnd-agency/oncollaboration/issues/86)
+
+**$derived**
+
+Een belangrijke rune waar ik het over wil hebben is de *$derived* rune sinds dat vrij intresante rune is die in mijn code is voorgekomen sinds ik mijn project van oncollaboration van sv4 over heb gezet naar sv5.
+
+In *comment.svelte* waar ik de timestamp functie heb gemaakt zijn alle reactive statements die orgineel aleen een dollar teken waren over gezet naar *$derived*.
+
+*$derived* maakt berekeningen van andere gegevens. een voorbeeld daarvan is dit
+
+```javascript
+let parsedContent = $derived(parseCommentContent(comment.content));
+```
+
+Deze korte functie berekend wat er binnen de parsedCommenContent functie gebeurt. waneer er iest veranderd in de comment.content zorgt de *$derived* ervoor dat de parsedContent var opnieuw berekend word. Dit maakt de variabele reactief en zorgt ervoor dat de inhoud altijd up-to-date is met de laatste wijzigingen in comment.content.
+
+Om het nog makkelijker uit te leggen. Post je een comment dan word de comment die je hebt geschreven (met eventueel de timestamp) correct weergeven word nadat je het hebt gepost
+
+Hier is de bron die meer over runes verteld [svelteDocs](https://svelte.dev/docs/svelte/what-are-runes)
+
+[issue naar mijn verwerking](https://github.com/fdnd-agency/oncollaboration/issues/75)
+
+
+

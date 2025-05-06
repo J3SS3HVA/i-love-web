@@ -1,4 +1,5 @@
 ## Inhoudsopgave
+**sprint 19**
 - [Week 1](#week-1)
    - [3 februari](#3-feb)
    - [4 februari](#4-feb)
@@ -15,6 +16,15 @@
    - [13 maart](#13-mrt)
 - [Week 7](#week-7)
    - [17 maart](#17-mrt)
+
+**sprint 20**
+- [Week 1](#week1)
+   - [14 april](#14-apr)
+   - [16 april](#16-apr)
+- [Week 2](#week2)
+   - [23 april](#23-apr)
+   - [24 april](#24-apr)
+   - [25 april](#25-apr)
 
 
 <h2 id="week-1">Week 1</h2>
