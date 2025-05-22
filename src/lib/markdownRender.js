@@ -1,7 +1,7 @@
 import { onMount } from "svelte";
 import MarkdownIt from "markdown-it";
 import hljs from "highlight.js";
-import "highlight.js/styles/github-dark.css"; // Add a theme for styling
+import "highlight.js/styles/an-old-hope.css"; // Add a theme for styling
 
 export function useMarkdownRenderer(data) {
   const md = new MarkdownIt({

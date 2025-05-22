@@ -68,4 +68,25 @@ aan de hand van deze issues:
 Heb ik een presentatie gehouden over de volledige chapter en timestamp functie.
 
 
+<h2 id="week6">Week 6</h2>
 
+<h3 id="mei-22">22 mei</h3>
+
+**Speciale cmd pilot workshop van Lauria**
+
+Vandaag heb ik een speciale korte workshop gevolgd van *Lauria*. Designer en eigenaar van [Lauría Communication + Design](https://lauria.nl/)
+
+In haar les heeft ze het gehad over *The four foundational design principles*
+
+- Contrast: combinatie met kleuren
+- Repetition: herhaling van bepaalde key details
+- Alignment: correct positioneren van dingen
+- Proximity: het groeperen van gerelateerde content. Of te wel met een bepaalde stylings kenmerk laten zien dat bepaalde dingen bij elkaar horen
+
+Meer erover vind je [hier](https://sopa.tulane.edu/blog/four-design-principles-live#:~:text=Luckily%2C%20there%20are%20four%20major,repetition%2C%20alignment%2C%20and%20proximity.)
+
+Tijdens workshop waren er een paar mini opdrachten die we deden bijvoorbeeld of er iets van die 4 principes terug komen in ons design, maar daarnaast stelde we ook wat vragen over ons design om eventuele feedback te krijgen. Korte feedback die we hebben gekregen van de docenten die aanwezig waren vind je [hier](https://github.com/fdnd-agency/oncollaboration/issues/124)
+
+
+
+<img src="/images/22mei.jpg" alt="">

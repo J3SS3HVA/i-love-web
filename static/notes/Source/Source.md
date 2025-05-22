@@ -15,6 +15,8 @@
   - [State Management](#state-management)
 - [Semester 4.5 sources](#semester-4.5-sources)
   - [svelte 5 runes](#svelte-runes)
+  - [:is() selector](#is-selector)
+  - [Conditional attributes Svelte](#conditional-attributes-svelte)
 
 <h2 id="semester-3-sources">Semester 3 sources</h2>
 
@@ -260,5 +262,78 @@ Hier is de bron die meer over runes verteld [svelteDocs](https://svelte.dev/docs
 
 [issue naar mijn verwerking](https://github.com/fdnd-agency/oncollaboration/issues/75)
 
+<h3 id="is-selector">:is() selector</h3>
+
+Aan de hand van een issue van [css weekly #609](https://css-weekly.com/issue-609/) heb ik een artikel gevonden over de *is:()* Selector.
+
+**voorbeeld**
+
+```css
+/* Zonder de is:() selector */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+
+/* met de is:() selector */
+:is(h1, h2, h3, h4, h5, h6) {
+	font-weight: bold;
+}
+```
+
+Als je zo naar de code kijkt denk je mischien van "whats the point". Nou, het toffe van deze techniek is dat verschillende elementen/selectoren binnen dezelfde parent element die dezelfde styling krijgen dat je de parent maar 1 keer hoeft te schrijven en dat allen ovirige selectoren binnen de () komen zonder dat je dat meerdere keren opnieuw hoeft te schrijven
+
+*voorbeeld met hoe ik het heb gedaan*
+
+```css
+/* before */
+
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4,
+.markdown-content h5,
+.markdown-content h6,
+.markdown-content b,
+.markdown-content strong,
+.markdown-content i,
+.markdown-content em,
+.markdown-content p {
+  margin: 10px 0;
+}
+
+/* after */
+
+.markdown-content :is(h2, h3, h4, h5, h6, b, strong, i, em, p) {
+  margin: 10px 0;
+}
+```
+
+ze doen allebij hetzelfde alleen de after is veel meer optimized.
+
+meer info vind je [hier](https://gomakethings.com/reducing-css-complexity-with-the-is-pseudo-class/?utm_source=CSS-Weekly&utm_campaign=Issue-609&utm_medium=web)
 
 
+<h3 id="conditional-attributes-svelte">Conditional attributes Svelte & inline scripting</h3>
+
+Sveltekit maar ook andere frameworks hebben De mogelijkheid om mini javascript code binnen een element te doen. 
+
+Hier bijvoorbeeld:
+
+In dit stukje geef ik aan als featureWebinars bestaat, hij de *js-enabled*.[link naar mijn code](https://github.com/fdnd-agency/oncollaboration/blob/version-before-redesign/src/routes/speakers/%5Bslug%5D/%2Bpage.svelte#L121)
+
+```sveltekit
+<section bind:this={featuredWebinars} class="featured-webinars {featuredWebinars ? 'js-enabled' : ''}">
+```
+
+Ander voorbeeld is deze hieronder:
+
+Deze geeft aan dat wanneer een animation voorbij is hij de *rotating animation* weghaald. [link naar mijn code](https://github.com/fdnd-agency/oncollaboration/blob/8c03eaa8207b8c1adeb25c3c2c50a088c2231f60/src/routes/speakers/%5Bslug%5D/%2Bpage.svelte#L124)
+
+```sveltekit
+<svg bind:this={svgElement} onanimationend={() => svgElement.classList.remove('rotating')} width="30px" height="30px" viewBox="0 0 24 24" fill="hsl(340, 100%, 15%)" xmlns="http://www.w3.org/2000/svg">
+        <rect x="3" y="7" width="18" height="14" rx="1" stroke="white" stroke-width="2" stroke-linecap="round"/>
+        <path d="M13 7L17 3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M11 7L7 3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+```
+
+[hier](https://svelte.dev/docs/svelte/basic-markup) vind je een bron over dit soort markups die je binnen zo'n html element kan doen
