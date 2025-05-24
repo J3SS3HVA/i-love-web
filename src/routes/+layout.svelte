@@ -24,8 +24,12 @@
 	header{
 		height: 5%;
 		margin: 0 10em;
+
+	@media (min-width: 1024px) {
+		
 		border-bottom: solid var(--primary-color);
 	}
+}
 
 	main {
 		display: block;
