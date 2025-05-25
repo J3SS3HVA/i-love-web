@@ -26,3 +26,4 @@ gelukshormoon, verbinding maken met componenten en animaties op de websites
  - chats
 
 
+<img src="/images/23mei.jpg" alt="">

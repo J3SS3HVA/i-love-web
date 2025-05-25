@@ -1,6 +1,7 @@
 ## Inhoudsopgave
 - [Kylian Valkhof](#14-feb)
 - [Cassie Evans](#7-mar)
+- [Kalok Yeung](#23-may)
 
 <h2 id="14-feb">Building your own browser, For fun andprofit Door Kylian Valkhof</h2>
 

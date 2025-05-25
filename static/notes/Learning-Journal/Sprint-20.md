@@ -59,13 +59,14 @@ Hij had een bepaalde sectie van de eerste jaars gebruikt als inspiratie voor de 
 
 **presenteren voor de tribe**
 
-aan de hand van deze issues:
+Bij deze terugkom dag was het de bedoeling dat ieder tafel dat uit ongeveer 4 man bestond aan elkaar ging presenteren met waar ze de afgelopen periode mee bezig zijn geweest. Nadat idereen gepresenteerd heeft werd de best gekozen en die gaat vervolgens voor de klas presenteren.
+
+
+Vervolgens heb ik dus voor de klas gepresenteerd aan de hand van deze issues:
 
 - [chapter function](https://github.com/fdnd-agency/oncollaboration/issues/61?issue=fdnd-agency%7Concollaboration%7C63)
 - [Pe versie](https://github.com/fdnd-agency/oncollaboration/issues/61?issue=fdnd-agency%7Concollaboration%7C65)
 - [Timestamp function](https://github.com/fdnd-agency/oncollaboration/issues/75)
-
-Heb ik een presentatie gehouden over de volledige chapter en timestamp functie.
 
 
 <h2 id="week6">Week 6</h2>

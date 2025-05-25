@@ -311,6 +311,8 @@ ze doen allebij hetzelfde alleen de after is veel meer optimized.
 
 meer info vind je [hier](https://gomakethings.com/reducing-css-complexity-with-the-is-pseudo-class/?utm_source=CSS-Weekly&utm_campaign=Issue-609&utm_medium=web)
 
+en [hier](https://github.com/J3SS3HVA/i-love-web/blob/d5ab39c9957ddaceda6eb5e915702bcf0623e3e9/static/styles/global.css#L114-L121) een voorbeeld van hoe ik het heb verwerkt in mijn eigen code.
+
 
 <h3 id="conditional-attributes-svelte">Conditional attributes Svelte & inline scripting</h3>
 

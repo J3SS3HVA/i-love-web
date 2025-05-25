@@ -179,7 +179,7 @@ p, a, li{
   margin-bottom: 60px;
 }
 
-.markdown-content h3 {
+.markdown-content :is(h2, h3) {
   margin-top: 60px;
 }
 
