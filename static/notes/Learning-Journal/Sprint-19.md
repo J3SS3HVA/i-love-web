@@ -27,6 +27,8 @@
    - [25 april](#25-apr)
 - [Week 6](#week6)
    - [Mei 22](#mei-22)
+- [Week 7](#week7)
+   - [28 mei](#28-mei)
 
 
 <h2 id="week-1">Week 1</h2>

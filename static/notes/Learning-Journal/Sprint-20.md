@@ -91,3 +91,17 @@ Tijdens workshop waren er een paar mini opdrachten die we deden bijvoorbeeld of 
 
 
 <img src="/images/22mei.jpg" alt="">
+
+<h2 id="week7">Week 7</h2>
+
+<h3 id="28-mei">28 mei </h3>
+
+Deze dag is waarschijnlijk de laatste of 1 van de laatse keren zijn dat we contact hebben met Judi (opdracht gever Oncollaboration). We zijn bij haar langs gekomen voor een design review met de eerste jaars.
+
+Tijdens het design review zijn we als eerst bij elkaar komen zitten om te bespreken over hoe het is gegaan de afgelope periodes en hoe we ervoor staan.
+
+Daarna Was het de bedoeling dat we Dat idereen liet zien wat ze hebben gemaakt. Ik en *Quincy* hebben en vragen lijst gemaakt waarbij we een aantal vragen hadden over wat ze over ons design vond. Omdat Judi geen technische achtergrond heeft probeerde we zoveel mogelijk door te vragen over wat ze vind van onze redesign zodat we zo duidelijk mogelijke feedback in return krijgen.
+
+[Hier](https://github.com/fdnd-agency/oncollaboration/issues/82#issuecomment-2915845780) Is waar je onze vragen lijst vind over het design waar we van te voren wat vragen hebben geschreven, maar ook tijdens het presenteren
+
+<img src="/images/29mei.jpg" alt="">
