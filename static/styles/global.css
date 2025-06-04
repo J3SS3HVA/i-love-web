@@ -183,6 +183,10 @@ p, a, li{
   margin-top: 60px;
 }
 
+.markdown-content code {
+  margin: 2em 0;
+}
+
 /* Default selection styling */
 ::selection {
   background-color: var(--primary-color);

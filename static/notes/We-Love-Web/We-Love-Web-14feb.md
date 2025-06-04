@@ -2,7 +2,11 @@
 - [Kylian Valkhof](#14-feb)
 - [Cassie Evans](#7-mar)
 - [Kalok Yeung](#23-may)
-
+- [Pre Css day](#Pre-Css-Day)
+    - [showcase Sanne](#Sanne-Showcase)
+    - [Nils Binder](#Nils-Binder)
+    - [Miriam Suzanne](#Miriam-Suzanne)
+    
 <h2 id="14-feb">Building your own browser, For fun andprofit Door Kylian Valkhof</h2>
 
 **polypane**
