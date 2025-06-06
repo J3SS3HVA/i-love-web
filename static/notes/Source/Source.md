@@ -17,6 +17,7 @@
   - [svelte 5 runes](#svelte-runes)
   - [:is() selector](#is-selector)
   - [Conditional attributes Svelte](#conditional-attributes-svelte)
+  - [Laws of UX](#LawsOfUx)
 
 <h2 id="semester-3-sources">Semester 3 sources</h2>
 
@@ -339,3 +340,7 @@ Deze geeft aan dat wanneer een animation voorbij is hij de *rotating animation* 
 ```
 
 [hier](https://svelte.dev/docs/svelte/basic-markup) vind je een bron over dit soort markups die je binnen zo'n html element kan doen
+
+<h3 id="LawsOfUx">Laws of UX</h3>
+
+Een intresante bron wat ik van *jason* heb gekregen gaat over de [regels van Ux design](https://lawsofux.com/serial-position-effect/). Deze Site bevat een lijstje met bepaalde dingen over aanpak van design. Zo heb je bijvoorbeeld [hier](https://lawsofux.com/serial-position-effect/) eentje wat gaat over *Serial Position Effect* dit betekent dat gebruikers vooral kijken naar wat er vooraan staat en wat er helemaal achteraan staat. Dit laat weten dat het belangrijk is bij design dat je dat ook doet voor de dingen die je het liefts wil laten zien.
