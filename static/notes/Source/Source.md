@@ -18,6 +18,8 @@
   - [:is() selector](#is-selector)
   - [Conditional attributes Svelte](#conditional-attributes-svelte)
   - [Laws of UX](#LawsOfUx)
+- [repairs](#repairs)
+  - [CSS @property](#css-property)
 
 <h2 id="semester-3-sources">Semester 3 sources</h2>
 
@@ -344,3 +346,200 @@ Deze geeft aan dat wanneer een animation voorbij is hij de *rotating animation* 
 <h3 id="LawsOfUx">Laws of UX</h3>
 
 Een intresante bron wat ik van *jason* heb gekregen gaat over de [regels van Ux design](https://lawsofux.com/serial-position-effect/). Deze Site bevat een lijstje met bepaalde dingen over aanpak van design. Zo heb je bijvoorbeeld [hier](https://lawsofux.com/serial-position-effect/) eentje wat gaat over *Serial Position Effect* dit betekent dat gebruikers vooral kijken naar wat er vooraan staat en wat er helemaal achteraan staat. Dit laat weten dat het belangrijk is bij design dat je dat ook doet voor de dingen die je het liefts wil laten zien.
+
+<h2 id="repairs">repairs</h2>
+
+<h3 id="css-property">css @property</h3>
+
+Zit momenteel in de reparatie periode en aan de hand van wat bronnen die *Joost* ons heeft gegeven over *scroll-driven-animation* vond ik daar iets in dat heet *@property* van css. Ik heb het wel vaker gezien maar wist niet wat het exact was dus ben onderzoek gaan doen over deze css techniek.
+
+Over dit onderwerp vind je hier de bron die mij geholpen heeft met her berggijpen van *@property*. Ook vind je 2 links die laat zien dat ik er zelf ook gebruik van heb gemaakt in 1 van mijn persoonlijke projecten waar ik een verzamel lijst wil maken van speel kaarten.
+
+[css tricks @property]()
+
+[Mijn github repo](https://github.com/J3SS3HVA/Onepiece-cardgame-collection)
+
+[css code](https://github.com/J3SS3HVA/Onepiece-cardgame-collection/blob/2ed04c933e0266109e12e1c1bf6887dd3c8a1bec/src/routes/%2Bpage.svelte#L85-L216)
+
+[live site](https://68a7037e96bcfc04c8c8c5a2--cardgamecollectiononepiece.netlify.app/)
+
+**Maar wat is @property precies?**
+
+Het is een bepaalde regel in css waarmee je zelf je eigen custom property kan definiëren met verschillende syntaxes zoals *number*, *percentage*, *color*, *angle* en meer. Naast dat kan je ook de ervenis (inherits) bepalen (Daar ga ik meer over vertelen).
+
+**syntaxes & initual value**
+
+In het vorige kopje heb ik al wat voorbeelden opgenoemd. Die syntaxes bepalen wat voor soort value de @property kan krijgen.
+
+Wat je hier ziet is dat de naam van de @property *@--hue* is. Als Syntax heeft hij angle, dat betekent dat zijn value altijd een getal moet zijn met deg aan het einde om aantegeven dat het ook echt een angle is.
+```css
+@property --hue {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+```
+
+Andere voorbeeld is bijvoorbeeld de *color*.
+
+Hier geld de regel dat je een geldige css kleur meegeeft (of het nou naam, hsl, rgb of hex is maakt niet uit.)
+
+```css
+@property --hue {
+  syntax: "<color>";
+  initial-value: red /*hsl,rgb en hex kan ook*/;
+  inherits: false;
+}
+```
+
+**meerdere syntaxes in 1 @property?**
+
+Css properties hebben ook de mogelijkheid om meerdere soorten syntax types in 1 @property te stoppen.
+
+```css
+@property --size {
+  syntax: "<percentage> | <length> | <color>";
+  initial-value: 0%;
+  inherits: true;
+}
+```
+
+Wat je hier ziet is dat Deze @property nu *percentage*, *length* en *color*. Dit betkent dat als je bij een bepaalde css selector de *--size* iets anders wil maken zoals kleur, dan is dat ook mogelijk.
+
+```css
+h2{
+  --size: green;
+}
+```
+
+**meerdere waardes**
+
+Naast het feit dat je met **|** meerdere syntaxes kan toevoegen kane je ook op verschillende manieren binnen de initial value meerdere waardes tergelijkertijd geven. met bijvoorbeeld *+* kan je bijvoorbeeld binnen de initial value een spacebar ruimte tussen 2 ruimtes geven.
+
+```css
+@property --size {
+  syntax: <length>+";
+  initial-value: 10px 20px;
+  inherits: true;
+}
+```
+
+Maar je kan ook met *#* gebruik maken van kommas.
+
+```css
+@property --text {
+  syntax: <string>#";
+  initial-value: linear-gradient(black, blue), linear-gradient(red, purple)";
+  inherits: true;
+}
+```
+
+**inherits**
+
+Het laatste wat je waarschijnlijk is opgevallen waar ik ook graag meer over wil vertellen is de *inherits*. De inherits is een boolean waarbij je kunt kiezen tussen true en false. Dit betkent dat als inherits op true staat en je veranderd de waarde van de @property ergens dan betekent dat de childeren van dat element die ook die property willen gebruiken de waarde krijgen van zijn parent en niet van het aangemaakte @property.
+
+Hier is een goed voorbeeld die van mijn eigen project komt. 
+
+```css
+ @property --card-content {
+    syntax: "<number> | <color> | <angle>";
+    inherits: false;
+    initial-value: red;
+  }
+ 
+  li {
+    --card-content: 20deg;
+    text-align: center;
+    padding: 0.5em;
+    border-radius: 8px;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s;
+    position: relative;
+    transition: transform 0.3s ease; 
+  }
+
+
+  li p {
+    color: var(--card-content);
+  }
+```
+
+Laten we er stap voor stap door heen gaan
+
+1. Heb dus een @property gemaakt die *--card-content* heet.
+2. de @property support meerdwere syntaxes types, zoals color.
+3. de waarde is rood en inherits staat op false
+4. vervolgens zie je dat de waarde veranderd naar 20deg. Dit kan omdat hij ook angle support
+5. Daaronder zie je dat de p in de li (oftewel de child van de li) een color property heeft met als waarde de custom property die ik heb aangemaakt.
+6. Omdat inherits op false staat betekent dat hij niet de waarde van zijn parent pakt. Dus de waarde in *li p* is nog steeds rood
+7. zou inherits op true zijn geweest dan was de waarde in de color 20deg geweest omdat hij de value van zijn parent pakt in plaats van de custom proprerty.
+
+Dit is een goed voorbeeld van hoe de inherits werkt.
+
+**maar wat is nou het voordeel aan custom properties als je het vergelijkt met css variables**
+
+Het is je mischien opgevallen dat het toepassen van css properties zowat sprekend lijkt als het toepassen van een css variable. Alleen het voordeel van de css @property is dat hij al een volledige info waarde heeft. Dat wil zeggen dat als je bijvoorbeeld een animation maakt en je zet alleen de custom property met een nieuwe waarde erin dat hij ook weet dat hij moet doen.
+
+Hier zie je een goed voorbeeld van mijn eigen project om het wat beter beeld ervan te krijgen.
+
+```css
+@property --text-animations {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0deg;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 1em;
+    animation: growshrink 0.7s ease-in-out;
+    animation-iteration-count: 5;
+    transform: rotate(var(--text-animations));
+  }
+
+  @keyframes growshrink {
+    to{
+      --text-animations: 360deg;
+    }
+  }
+```
+
+1. Je ziet een custom @property met de naam *--text-animations*
+2. Zijn syntax is angle met als waarde 0deg
+3. Die waarde geef ik aan mijn h1 met de transform rotate property.
+4. Je ziet ook een dat ik de h1 een animation heb gegeven. 
+5. In de animation zie je dat ik alleen de custom propertty heb gegevenen binnen de to met daarbij een nieuwe waarde. waardoor hij dus een volledig rondje draait.
+6. Dit werkt omdat css weet dat dit een cutom property is die angle als syntax heeft. Dat betekent dat je hem in de animation alleen hem een nieuwe waarde moet geven om hem te laten draaien
+
+Als je css var gebruikt in plaats van @property zou dit niet werken bij de animation.
+
+Waarom dit niet werkt is omdat css niet kan zien dat die variable over rotate gaat. Dus in de animation zeg je alleen *naar 360deg* en niet *naar rotate 360deg* wat dus wel het geval is bij @property.
+
+```css
+  :root{
+    --text-animations: 0deg;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 1em;
+    animation: growshrink 0.7s ease-in-out;
+    animation-iteration-count: 5;
+    transform: rotate(var(--text-animations));
+  }
+
+  @keyframes growshrink {
+    to{
+      --text-animations: 360deg;
+    }
+  }
+```
+
+**Wat is mijn eigen mening over @property**
+
+Wat je hebt gezien is dat ik het zelf op een kleinschalige manier heb toegepast in mijn eigen project om er mee te expirimenteren, maar ik zie nu al de potentie van deze css techniek voor grote projecten. Zeker merk ik het bij animations, je maakt De keyframe kleiner en cleaner. Dus eigelijk is dit een andere manier om je code dry te maken en meer leesbaar. Andere dingen dat ik merk is dat het fouten in de css sneller voorkomt sinds je met css properties moet aangeven wat het is vergeleken met var waar je van alles kan in dumpen. En als laatst De inherits die het gedrag kan bepalen van verschillende css selectors die die @property in hun eigen styling toepast.
+
+
+
+
+
