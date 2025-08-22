@@ -352,11 +352,11 @@ Een intresante bron wat ik van *jason* heb gekregen gaat over de [regels van Ux 
 
 <h3 id="css-property">css @property</h3>
 
-Zit momenteel in de reparatie periode en aan de hand van wat bronnen die *Joost* ons heeft gegeven over *scroll-driven-animation* vond ik daar iets in dat heet *@property* van css. Ik heb het wel vaker gezien maar wist niet wat het exact was dus ben onderzoek gaan doen over deze css techniek.
+Momenteel zit ik in mijn reparatie periode van mijn endterm van semester 4. En aan de hand van wat bronnen die *Joost* mij en mijn mede studenten heeft gegeven over *scroll-driven-animation*, vond ik daar iets in dat heet *@property* van css. Ik heb het wel vaker gezien in verschillende code projecten ,maar wist niet wat het exact was dus ben onderzoek gaan doen over deze css techniek.
 
-Over dit onderwerp vind je hier de bron die mij geholpen heeft met her berggijpen van *@property*. Ook vind je 2 links die laat zien dat ik er zelf ook gebruik van heb gemaakt in 1 van mijn persoonlijke projecten waar ik een verzamel lijst wil maken van speel kaarten.
+Over dit onderwerp vind je hieronder de bron die mij geholpen heeft met het begrijpen van *@property* in css. Ook vind je 3 links die laten zien dat ik er zelf ook gebruik van heb gemaakt in 1 van de persoonlijke projecten waar ik mee bezig ben geweest de afgelopen tijd.
 
-[css tricks @property]()
+[css tricks @property](https://css-tricks.com/almanac/rules/p/property/)
 
 [Mijn github repo](https://github.com/J3SS3HVA/Onepiece-cardgame-collection)
 
@@ -366,13 +366,14 @@ Over dit onderwerp vind je hier de bron die mij geholpen heeft met her berggijpe
 
 **Maar wat is @property precies?**
 
-Het is een bepaalde regel in css waarmee je zelf je eigen custom property kan definiëren met verschillende syntaxes zoals *number*, *percentage*, *color*, *angle* en meer. Naast dat kan je ook de ervenis (inherits) bepalen (Daar ga ik meer over vertelen).
+Het is een bepaalde regel in css waarmee je zelf je eigen custom property kan definiëren met verschillende syntaxes ,zoals *number*, *percentage*, *color*, *angle* en meer. Naast dat kan je ook de erfenis (inherits) bepalen (Daar ga ik meer over vertelen).
 
 **syntaxes & initual value**
 
-In het vorige kopje heb ik al wat voorbeelden opgenoemd. Die syntaxes bepalen wat voor soort value de @property kan krijgen.
+In het vorige kopje heb ik al wat voorbeelden opgenoemd die syntaxes bepalen wat voor soort value de @property kan krijgen.
 
-Wat je hier ziet is dat de naam van de @property *@--hue* is. Als Syntax heeft hij angle, dat betekent dat zijn value altijd een getal moet zijn met deg aan het einde om aantegeven dat het ook echt een angle is.
+Wat je hier ziet is dat de naam van de @property *@--hue* heet. Als Syntax heeft hij angle, dat betekent dat zijn waarde altijd een getal moet zijn met *deg* aan het einde om aantegeven dat het ook echt een angle is.
+
 ```css
 @property --hue {
   syntax: "<angle>";
@@ -383,7 +384,7 @@ Wat je hier ziet is dat de naam van de @property *@--hue* is. Als Syntax heeft h
 
 Andere voorbeeld is bijvoorbeeld de *color*.
 
-Hier geld de regel dat je een geldige css kleur meegeeft (of het nou naam, hsl, rgb of hex is maakt niet uit.)
+Hier geldt de regel dat je een geldige css kleur meegeeft (of het nou naam, hsl, rgb of hex is maakt niet uit.)
 
 ```css
 @property --hue {
@@ -405,7 +406,7 @@ Css properties hebben ook de mogelijkheid om meerdere soorten syntax types in 1 
 }
 ```
 
-Wat je hier ziet is dat Deze @property nu *percentage*, *length* en *color*. Dit betkent dat als je bij een bepaalde css selector de *--size* iets anders wil maken zoals kleur, dan is dat ook mogelijk.
+Wat je hier ziet is dat deze @property nu *percentage*, *length* en *color*. Dit betekend dat als je bij een bepaalde css selector de custom property genaamd *--size* iets anders wil maken, zoals kleur, dan is dat ook mogelijk.
 
 ```css
 h2{
@@ -415,7 +416,7 @@ h2{
 
 **meerdere waardes**
 
-Naast het feit dat je met **|** meerdere syntaxes kan toevoegen kane je ook op verschillende manieren binnen de initial value meerdere waardes tergelijkertijd geven. met bijvoorbeeld *+* kan je bijvoorbeeld binnen de initial value een spacebar ruimte tussen 2 ruimtes geven.
+Naast het feit dat je met **|** meerdere syntaxes kun toevoegen, kan je ook op verschillende manieren binnen de *initial-value*, meerdere waarden op verschillende manieren definiëren. Met bijvoorbeeld *+* kan je bijvoorbeeld binnen de *initial-value* een spacebar ruimte tussen 2 waardes geven.
 
 ```css
 @property --size {
@@ -425,7 +426,7 @@ Naast het feit dat je met **|** meerdere syntaxes kan toevoegen kane je ook op v
 }
 ```
 
-Maar je kan ook met *#* gebruik maken van kommas.
+Maar je kan ook met de *#* gebruik maken van kommas tussen 2 verschillende waardes.
 
 ```css
 @property --text {
@@ -437,7 +438,7 @@ Maar je kan ook met *#* gebruik maken van kommas.
 
 **inherits**
 
-Het laatste wat je waarschijnlijk is opgevallen waar ik ook graag meer over wil vertellen is de *inherits*. De inherits is een boolean waarbij je kunt kiezen tussen true en false. Dit betkent dat als inherits op true staat en je veranderd de waarde van de @property ergens dan betekent dat de childeren van dat element die ook die property willen gebruiken de waarde krijgen van zijn parent en niet van het aangemaakte @property.
+Het laatste wat je waarschijnlijk is opgevallen, waar ik ook graag meer over wil vertellen, is de *inherits*. De inherits is een boolean, waarbij je kunt kiezen tussen true en false. Dit betekent dat als inherits op true staat en je veranderd de waarde van de @property ergens, dan betekent dat de childeren van dat element die ook die property willen gebruiken, de waarde krijgen van zijn parent en niet van het aangemaakte @property.
 
 Hier is een goed voorbeeld die van mijn eigen project komt. 
 
@@ -465,23 +466,23 @@ Hier is een goed voorbeeld die van mijn eigen project komt.
   }
 ```
 
-Laten we er stap voor stap door heen gaan
+Laten we stap voor stap er doorheen gaan
 
-1. Heb dus een @property gemaakt die *--card-content* heet.
-2. de @property support meerdwere syntaxes types, zoals color.
-3. de waarde is rood en inherits staat op false
-4. vervolgens zie je dat de waarde veranderd naar 20deg. Dit kan omdat hij ook angle support
-5. Daaronder zie je dat de p in de li (oftewel de child van de li) een color property heeft met als waarde de custom property die ik heb aangemaakt.
-6. Omdat inherits op false staat betekent dat hij niet de waarde van zijn parent pakt. Dus de waarde in *li p* is nog steeds rood
-7. zou inherits op true zijn geweest dan was de waarde in de color 20deg geweest omdat hij de value van zijn parent pakt in plaats van de custom proprerty.
+1. Ik heb een @property gemaakt die *--card-content* heet.
+2. De @property support meerdeere syntax types, zoals color.
+3. De waarde is rood en inherits staat op false.
+4. Vervolgens zie je dat de waarde is veranderd naar 20deg. Dit kan ,omdat hij ook angle support
+5. Daaronder zie je dat de *p* in de *li* (oftewel de child van de li) een color property heeft met als waarde de custom property die ik heb aangemaakt.
+6. Omdat inherits op false staat, betekent dat hij niet de waarde van zijn parent pakt. Dus de waarde in *li p* is dan nog steeds rood
+7. Zou de inherits op true staan, dan was de waarde in de color 20deg geweest, omdat hij de value van zijn parent pakt in plaats van de custom proprerty.
 
 Dit is een goed voorbeeld van hoe de inherits werkt.
 
-**maar wat is nou het voordeel aan custom properties als je het vergelijkt met css variables**
+**maar wat is nou het voordeel aan custom properties als je het vergelijkt met css variables?**
 
-Het is je mischien opgevallen dat het toepassen van css properties zowat sprekend lijkt als het toepassen van een css variable. Alleen het voordeel van de css @property is dat hij al een volledige info waarde heeft. Dat wil zeggen dat als je bijvoorbeeld een animation maakt en je zet alleen de custom property met een nieuwe waarde erin dat hij ook weet dat hij moet doen.
+Het is je mischien opgevallen dat het toepassen van css properties zowat sprekend lijkt als het toepassen van een css variable. Alleen het voordeel van de css @property is dat hij al een volledige info waarde heeft. Dat wil zeggen, dat als je bijvoorbeeld een animation maakt en je zet alleen de custom property met een nieuwe waarde erin, dat hij ook weet wat hij moet doen.
 
-Hier zie je een goed voorbeeld van mijn eigen project om het wat beter beeld ervan te krijgen.
+Hier zie je een goed voorbeeld van mijn eigen project om er een beter beeld van te krijgen.
 
 ```css
 @property --text-animations {
@@ -507,14 +508,14 @@ Hier zie je een goed voorbeeld van mijn eigen project om het wat beter beeld erv
 
 1. Je ziet een custom @property met de naam *--text-animations*
 2. Zijn syntax is angle met als waarde 0deg
-3. Die waarde geef ik aan mijn h1 met de transform rotate property.
-4. Je ziet ook een dat ik de h1 een animation heb gegeven. 
-5. In de animation zie je dat ik alleen de custom propertty heb gegevenen binnen de to met daarbij een nieuwe waarde. waardoor hij dus een volledig rondje draait.
-6. Dit werkt omdat css weet dat dit een cutom property is die angle als syntax heeft. Dat betekent dat je hem in de animation alleen hem een nieuwe waarde moet geven om hem te laten draaien
+3. Die waarde geef ik aan mijn h1 element, met de transform rotate property.
+4. Je ziet ook dat ik de h1 een animation heb gegeven. 
+5. In de animation zie je dat ik alleen de custom property heb gegeven binnen de *to* met daarbij een nieuwe waarde. Waardoor hij dus een volledig rondje draait.
+6. Dit werkt, omdat css weet dat dit een custom property is die angle als syntax heeft. Dat betekent dat je deze in de animation alleen een nieuwe waarde moet geven om het element te laten draaien.
 
-Als je css var gebruikt in plaats van @property zou dit niet werken bij de animation.
+Als je css *var* gebruikt in plaats van @property zou dit niet werken bij de animation.
 
-Waarom dit niet werkt is omdat css niet kan zien dat die variable over rotate gaat. Dus in de animation zeg je alleen *naar 360deg* en niet *naar rotate 360deg* wat dus wel het geval is bij @property.
+Waarom dit niet werkt is, omdat css niet kan zien dat deze variable over rotate gaat. Dus in de animation zeg je alleen *naar 360deg* en niet *naar rotate 360deg*, wat dus wel het geval is bij @property.
 
 ```css
   :root{
@@ -538,21 +539,23 @@ Waarom dit niet werkt is omdat css niet kan zien dat die variable over rotate ga
 
 **Wat is mijn eigen mening over @property**
 
-Wat je hebt gezien is dat ik het zelf op een kleinschalige manier heb toegepast in mijn eigen project om er mee te expirimenteren, maar ik zie nu al de potentie van deze css techniek voor grote projecten. Zeker merk ik het bij animations, je maakt De keyframe kleiner en cleaner. Dus eigelijk is dit een andere manier om je code dry te maken en meer leesbaar. Andere dingen dat ik merk is dat het fouten in de css sneller voorkomt sinds je met css properties moet aangeven wat het is vergeleken met var waar je van alles kan in dumpen. En als laatst De inherits die het gedrag kan bepalen van verschillende css selectors die die @property in hun eigen styling toepast.
+Wat je hebt gezien is dat ik het zelf op een kleinschalige manier heb toegepast in mijn eigen project om er mee te expirimenteren. Maar ik zie nu al de potentie van deze css techniek voor grote projecten. Zeker merk ik het bij animations, je maakt de keyframe kleiner en cleaner. Dus eigelijk is dit een andere manier om je code *dry* te maken en meer leesbaar. Andere dingen die mij zijn opgevallen, is dat het maken van fouten in de css sneller wordt voorkomen, sinds je met css properties moet aangeven wat het precies is vergeleken met var, waar je van alles in kan dumpen. En als laatst dat je met inherits het gedrag kan bepalen van verschillende css selectors die de @property in hun eigen styling toepast.
 
 <h3 id="scroll-driven">scroll driven animation</h3>
 
-Binnen mijn eigen project Ben ik bezig geweest met scroll-driven animation. Ik heb hiermee eerder gewerkt en daar ik inspiratie van gepakt [inspiratie van mijn code uit sprint 17](https://github.com/SamaraFellaDina/future-ready-design/blob/1e5460f35f9cccf29233ec8e1c2855973efba20b/src/lib/2_Molecules/Orbit.svelte#L105-L116). 
+Binnen mijn eigen project ben ik bezig geweest met scroll-driven-animation. Ik heb hiermee eerder gewerkt en heb ik daar inspiratie uitgehaald. 
 
-**Maar wat is scroll driven animation nou eigelijk**
+[inspiratie van mijn code uit sprint 17](https://github.com/SamaraFellaDina/future-ready-design/blob/1e5460f35f9cccf29233ec8e1c2855973efba20b/src/lib/2_Molecules/Orbit.svelte#L105-L116). 
 
-Om het zo makkelijk mogelijk te houden is scroll driven animation een manier om animations te laten uitvoeren wanneer je scrollt op een bepaald elemen inplaats van dat het gelijk uitvoert na het laden van de pagina.
+**Maar wat is scroll driven animation eigelijk?**
 
-**Mijn ervaring bij het maken van scroll driven animation**
+Om het zo makkelijk mogelijk te houden is scroll-driven-animation een manier om animations te laten uitvoeren wanneer je scrollt op een bepaald element, inplaats van dat het gelijk uitvoert na het laden van de pagina.
 
-In het algemeen Heb ik er geen moeite mee gehad sinds deze feature niet veel code.
+**Mijn ervaring bij het maken van scroll-driven-animation**
 
-Hier vind je ook een voorbeeld van hoe ik scroll driven werkent heb gekregen in mijn [code](https://github.com/J3SS3HVA/Onepiece-cardgame-collection/blob/main/src/routes/%2Bpage.svelte#L156-L188)
+In het algemeen heb ik er geen moeite mee gehad sinds deze feature niet veel code nodig heeft om hem werkend te krijgen.
+
+Hier vind je ook een voorbeeld van hoe ik scroll-driven werkent heb gekregen in mijn [code](https://github.com/J3SS3HVA/Onepiece-cardgame-collection/blob/main/src/routes/%2Bpage.svelte#L156-L188)
 
 ```css
 @supports (animation-timeline: view()){
@@ -590,26 +593,26 @@ Hier vind je ook een voorbeeld van hoe ik scroll driven werkent heb gekregen in 
 }
 ```
 
-1. Als eerst zorg ik voor met de **@support** dit alleen werkt voor elementen die scroll driven animation ondersteunen.
-2. wat ik dan doe is dat ik de waarde van mijn [custom property](#css-property) binnen de animation van waarde verander na 10deg.
-3. Binnen de animation heb ik hem een naam gegeven genaamd *straighten*. 
-4. linear en both zorgen ervoor dat de value behouden blijven buiten de animatie. Zonder dit kan je net aan de kaarten zien in hun normale staat vlak voordat ze buiten het scherm komen.
-5. Daarna geef ik hem een animation time line gebaseerd op **view()**. Dit zorgt ervoor dat de scroll driven animation aan het element begint zodra hij bij het begin van de viewport is (0%) en eindigt bij het einde van de viewport (100%). Ik heb het leeg gehouden binnen de () omdat dit zowel voor verticale als horizontale scroll werkt. [mozzilla view()](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline/view)
-6. De [animation-range](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-range) is bedoeld voor de andere @keyframe animation die gecomment is. De animation range zorgt ervoor dat de animation halverwege het scrollen binnen het scherm (50% in het midden dus) hij de animatie eindigt. Dat betekent dat hij niet 100% van de animation berijk op 100% van de view poort maar halverwegen. Oftewel entry = begin hier met animeren, cover = eindig de animatie hier.
-7. Als laats geef ik de *--card-content* aan transform property met daarin een rotate.
-8. Daarmee hoef ik dus alleen de custom property doorgeven met een nieuwe waarde en met dat heb ik een succesvolle scroll driven animation gemaakt die je in mijn [livesite](https://cardgamecollectiononepiece.netlify.app/)terug vind.
+1. Als eerst zorg ik er voor met de **@support** dat dit alleen werkt voor browsers die scroll-driven-animation ook ondersteunen.
+2. Wat ik dan doe is dat ik de waarde van mijn [custom property](#css-property) binnen de animation van waarde heb veranderd na 10deg.
+3. Binnen de animation heb ik het een naam gegeven, genaamd *straighten*. 
+4. *Linear* en *both* zorgen ervoor dat de waarde van het element behouden blijft buiten de animatie. Zonder dit, kan je net aan de kaarten zien in hun normale staat vlak voordat ze buiten het scherm vallen.
+5. Daarna geef ik het een animation-timeline met als waarde **view()**. Dit zorgt ervoor dat de scroll-driven-animation aan het element begint, zodra hij bij het begin van de viewport is (0%) en eindigt bij het einde van de viewport (100%). Ik heb het leeg gehouden binnen de *()*, omdat dit zowel voor verticale als horizontale scroll werkt. Zie de bron [mozzilla view()](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline/view) 
+6. De [animation-range](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-range) is bedoeld voor de andere @keyframe animation die *commented* is. De animation range zorgt ervoor dat de animation halverwege het scrollen binnen het scherm (50% in het midden dus) hij de animatie eindigt. Dat betekent dat hij niet 100% van de animation bereikt op 100% van de view poort, maar halverwegen. **Oftewel entry = begin op bepaalde positie met animeren en cover = beëindig de animatie een ander positie.**
+7. Als laats geef ik de *--card-content* als waarde aan de transform property met daarin een rotate.
+8. Daarmee hoef ik dus alleen de custom property door te geven met een nieuwe waarde en heb ik hiermee een succesvolle scroll-driven-animation gemaakt die je in mijn [livesite](https://cardgamecollectiononepiece.netlify.app/) terug vind.
 
 **recap bronnen**
 
-[inspiratie van mijn code uit sprint 17](https://github.com/SamaraFellaDina/future-ready-design/blob/1e5460f35f9cccf29233ec8e1c2855973efba20b/src/lib/2_Molecules/Orbit.svelte#L105-L116): Waar ik mijn mind heb verversd over scroll driven animation.
+[inspiratie van mijn code uit sprint 17](https://github.com/SamaraFellaDina/future-ready-design/blob/1e5460f35f9cccf29233ec8e1c2855973efba20b/src/lib/2_Molecules/Orbit.svelte#L105-L116): Waar ik mijn mind heb verversd over scroll-driven-animation.
 
 [mozzilla view()](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline/view): geeft wat uitgebreidere uitleg over de **view()**.
 
-[animation-range](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-range): geeft uitgebreide uitleg over de animation range die mij dus geholpen heeftmet het starten en eindigen van mijn gecommente keyfram animation.
+[animation-range](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-range): geeft uitgebreide uitleg over de animation range die mij geholpen heeft met het starten en eindigen van mijn *commented* keyframe animation.
 
-[livesite](https://cardgamecollectiononepiece.netlify.app/): mijn live site. Waar ik mijn scroll driven animation werken heb gekregen.
+[livesite](https://cardgamecollectiononepiece.netlify.app/): mijn live site waar ik mijn scroll-driven-animation werkend heb gekregen.
 
-[code](https://github.com/J3SS3HVA/Onepiece-cardgame-collection/blob/main/src/routes/%2Bpage.svelte#L156-L188): en natuurlijk de code die erbij hoort.
+[code](https://github.com/J3SS3HVA/Onepiece-cardgame-collection/blob/main/src/routes/%2Bpage.svelte#L156-L188): en uiteraard mijn zelf gemaakte code die erbij hoort.
 
 
 
