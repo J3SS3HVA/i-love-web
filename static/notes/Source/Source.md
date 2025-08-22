@@ -20,6 +20,7 @@
   - [Laws of UX](#LawsOfUx)
 - [repairs](#repairs)
   - [CSS @property](#css-property)
+  - [Scroll driven](#scroll-driven)
 
 <h2 id="semester-3-sources">Semester 3 sources</h2>
 
@@ -361,7 +362,7 @@ Over dit onderwerp vind je hier de bron die mij geholpen heeft met her berggijpe
 
 [css code](https://github.com/J3SS3HVA/Onepiece-cardgame-collection/blob/2ed04c933e0266109e12e1c1bf6887dd3c8a1bec/src/routes/%2Bpage.svelte#L85-L216)
 
-[live site](https://68a7037e96bcfc04c8c8c5a2--cardgamecollectiononepiece.netlify.app/)
+[live site](https://cardgamecollectiononepiece.netlify.app/)
 
 **Maar wat is @property precies?**
 
@@ -538,6 +539,78 @@ Waarom dit niet werkt is omdat css niet kan zien dat die variable over rotate ga
 **Wat is mijn eigen mening over @property**
 
 Wat je hebt gezien is dat ik het zelf op een kleinschalige manier heb toegepast in mijn eigen project om er mee te expirimenteren, maar ik zie nu al de potentie van deze css techniek voor grote projecten. Zeker merk ik het bij animations, je maakt De keyframe kleiner en cleaner. Dus eigelijk is dit een andere manier om je code dry te maken en meer leesbaar. Andere dingen dat ik merk is dat het fouten in de css sneller voorkomt sinds je met css properties moet aangeven wat het is vergeleken met var waar je van alles kan in dumpen. En als laatst De inherits die het gedrag kan bepalen van verschillende css selectors die die @property in hun eigen styling toepast.
+
+<h3 id="scroll-driven">scroll driven animation</h3>
+
+Binnen mijn eigen project Ben ik bezig geweest met scroll-driven animation. Ik heb hiermee eerder gewerkt en daar ik inspiratie van gepakt [inspiratie van mijn code uit sprint 17](https://github.com/SamaraFellaDina/future-ready-design/blob/1e5460f35f9cccf29233ec8e1c2855973efba20b/src/lib/2_Molecules/Orbit.svelte#L105-L116). 
+
+**Maar wat is scroll driven animation nou eigelijk**
+
+Om het zo makkelijk mogelijk te houden is scroll driven animation een manier om animations te laten uitvoeren wanneer je scrollt op een bepaald elemen inplaats van dat het gelijk uitvoert na het laden van de pagina.
+
+**Mijn ervaring bij het maken van scroll driven animation**
+
+In het algemeen Heb ik er geen moeite mee gehad sinds deze feature niet veel code.
+
+Hier vind je ook een voorbeeld van hoe ik scroll driven werkent heb gekregen in mijn [code](https://github.com/J3SS3HVA/Onepiece-cardgame-collection/blob/main/src/routes/%2Bpage.svelte#L156-L188)
+
+```css
+@supports (animation-timeline: view()){
+
+  img {
+    --card-content: 10deg;
+    animation: straighten linear both;
+    animation-timeline: view();
+    /* animation-range: entry 0% cover 50%; */
+    /* animation-range: entry 40% exit 50%; */
+    transform: rotate(var(--card-content));
+}
+
+/* @keyframes straighten {
+  to{
+    --card-content: 0deg;
+    scale: 1;
+  }
+} */
+
+  @keyframes straighten{
+    0% {
+      --card-content: 10deg;
+      scale: 0.8;
+    }
+    50% {
+      --card-content: 0deg;
+      scale: 1;
+    }
+    100% {
+      --card-content: 10deg;
+      scale: 0.8; 
+    }
+  }
+}
+```
+
+1. Als eerst zorg ik voor met de **@support** dit alleen werkt voor elementen die scroll driven animation ondersteunen.
+2. wat ik dan doe is dat ik de waarde van mijn [custom property](#css-property) binnen de animation van waarde verander na 10deg.
+3. Binnen de animation heb ik hem een naam gegeven genaamd *straighten*. 
+4. linear en both zorgen ervoor dat de value behouden blijven buiten de animatie. Zonder dit kan je net aan de kaarten zien in hun normale staat vlak voordat ze buiten het scherm komen.
+5. Daarna geef ik hem een animation time line gebaseerd op **view()**. Dit zorgt ervoor dat de scroll driven animation aan het element begint zodra hij bij het begin van de viewport is (0%) en eindigt bij het einde van de viewport (100%). Ik heb het leeg gehouden binnen de () omdat dit zowel voor verticale als horizontale scroll werkt. [mozzilla view()](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline/view)
+6. De [animation-range](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-range) is bedoeld voor de andere @keyframe animation die gecomment is. De animation range zorgt ervoor dat de animation halverwege het scrollen binnen het scherm (50% in het midden dus) hij de animatie eindigt. Dat betekent dat hij niet 100% van de animation berijk op 100% van de view poort maar halverwegen. Oftewel entry = begin hier met animeren, cover = eindig de animatie hier.
+7. Als laats geef ik de *--card-content* aan transform property met daarin een rotate.
+8. Daarmee hoef ik dus alleen de custom property doorgeven met een nieuwe waarde en met dat heb ik een succesvolle scroll driven animation gemaakt die je in mijn [livesite](https://cardgamecollectiononepiece.netlify.app/)terug vind.
+
+**recap bronnen**
+
+[inspiratie van mijn code uit sprint 17](https://github.com/SamaraFellaDina/future-ready-design/blob/1e5460f35f9cccf29233ec8e1c2855973efba20b/src/lib/2_Molecules/Orbit.svelte#L105-L116): Waar ik mijn mind heb verversd over scroll driven animation.
+
+[mozzilla view()](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timeline/view): geeft wat uitgebreidere uitleg over de **view()**.
+
+[animation-range](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-range): geeft uitgebreide uitleg over de animation range die mij dus geholpen heeftmet het starten en eindigen van mijn gecommente keyfram animation.
+
+[livesite](https://cardgamecollectiononepiece.netlify.app/): mijn live site. Waar ik mijn scroll driven animation werken heb gekregen.
+
+[code](https://github.com/J3SS3HVA/Onepiece-cardgame-collection/blob/main/src/routes/%2Bpage.svelte#L156-L188): en natuurlijk de code die erbij hoort.
+
 
 
 
